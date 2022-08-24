@@ -3,16 +3,16 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -94,6 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="NXI-wS-5eB"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
@@ -111,11 +112,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-CV-nsV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-CV-nsV">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-b8-Hqw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="DXK-Os-HcL"/>
+                                        </constraints>
                                         <color key="separatorColor" systemColor="labelColor"/>
                                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -137,16 +141,65 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fKn-vV-Vig">
+                                        <rect key="frame" x="10" y="280" width="394" height="222.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8y5-tp-SvQ">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IiI-gG-o6T">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fqM-4l-XjP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Zm-SFV">
+                                        <rect key="frame" x="0.0" y="532.5" width="414" height="106.5"/>
+                                    </scrollView>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-G7-ALb">
+                                        <rect key="frame" x="0.0" y="669" width="414" height="49"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <tabBarItem systemItem="search" id="PFL-KG-5PN"/>
+                                            <tabBarItem id="2Bd-rR-cRA" userLabel="Calendar">
+                                                <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="medium"/>
+                                            </tabBarItem>
+                                            <tabBarItem selectedImage="house" catalog="system" id="fEt-DV-BZs" userLabel="Home"/>
+                                            <tabBarItem systemItem="favorites" id="OP5-bA-jKB" userLabel="MyPage"/>
+                                            <tabBarItem systemItem="more" id="ei1-Ug-Qkp" userLabel="Setting"/>
+                                        </items>
+                                    </tabBar>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oyo-G7-ALb" firstAttribute="top" secondItem="QpT-Zm-SFV" secondAttribute="bottom" constant="30" id="1I6-SI-wF4"/>
+                                    <constraint firstAttribute="trailing" secondItem="fKn-vV-Vig" secondAttribute="trailing" constant="10" id="7XW-4p-G4G"/>
+                                    <constraint firstItem="QpT-Zm-SFV" firstAttribute="leading" secondItem="g9e-CV-nsV" secondAttribute="leading" id="AfX-AQ-7JR"/>
+                                    <constraint firstItem="fKn-vV-Vig" firstAttribute="leading" secondItem="g9e-CV-nsV" secondAttribute="leading" constant="10" id="BhC-2V-vMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="QpT-Zm-SFV" secondAttribute="trailing" id="CcI-Ea-5vg"/>
+                                    <constraint firstItem="QpT-Zm-SFV" firstAttribute="top" secondItem="fKn-vV-Vig" secondAttribute="bottom" constant="30" id="Cuf-nM-Ces"/>
+                                    <constraint firstItem="fKn-vV-Vig" firstAttribute="height" secondItem="g9e-CV-nsV" secondAttribute="height" multiplier="0.310028" id="uvr-QO-X5I"/>
+                                    <constraint firstItem="fKn-vV-Vig" firstAttribute="top" secondItem="fUP-b8-Hqw" secondAttribute="bottom" constant="30" id="vzR-j4-77d"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DYQ-Ql-kvk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DYQ-Ql-kvk" firstAttribute="bottom" secondItem="Oyo-G7-ALb" secondAttribute="bottom" id="2ha-Mo-pdM"/>
+                            <constraint firstItem="Oyo-G7-ALb" firstAttribute="leading" secondItem="DYQ-Ql-kvk" secondAttribute="leading" id="82X-na-JgG"/>
                             <constraint firstItem="o9a-yP-kEt" firstAttribute="centerX" secondItem="pha-KT-hI3" secondAttribute="centerX" id="HwZ-oZ-ETS"/>
                             <constraint firstItem="g9e-CV-nsV" firstAttribute="top" secondItem="o9a-yP-kEt" secondAttribute="bottom" constant="30" id="Nsh-aw-D4M"/>
                             <constraint firstItem="DYQ-Ql-kvk" firstAttribute="trailing" secondItem="g9e-CV-nsV" secondAttribute="trailing" id="QIG-tB-cl2"/>
                             <constraint firstItem="DYQ-Ql-kvk" firstAttribute="bottom" secondItem="g9e-CV-nsV" secondAttribute="bottom" id="RVT-wC-DJX"/>
+                            <constraint firstItem="DYQ-Ql-kvk" firstAttribute="trailing" secondItem="Oyo-G7-ALb" secondAttribute="trailing" id="WqC-XH-sdc"/>
                             <constraint firstItem="o9a-yP-kEt" firstAttribute="top" secondItem="DYQ-Ql-kvk" secondAttribute="top" id="bD7-A4-9lC"/>
                             <constraint firstItem="g9e-CV-nsV" firstAttribute="leading" secondItem="DYQ-Ql-kvk" secondAttribute="leading" id="yUE-FY-YSJ"/>
                         </constraints>
@@ -176,6 +229,8 @@
     <resources>
         <image name="AppleLogIn" width="200" height="32"/>
         <image name="LogInPicture" width="219" height="209"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <namedColor name="MainColor">
             <color red="0.80392156862745101" green="0.85098039215686272" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
