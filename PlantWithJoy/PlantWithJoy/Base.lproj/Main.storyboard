@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-912" y="107"/>
+            <point key="canvasLocation" x="2260" y="-838"/>
         </scene>
         <!--MainView-->
         <scene sceneID="2PD-qd-CZZ">
@@ -259,7 +258,7 @@
                             <constraint firstItem="WKD-WW-5qV" firstAttribute="trailing" secondItem="Tj1-AX-38b" secondAttribute="trailing" id="zyH-Bs-rGi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="X4v-jX-WHO"/>
+                    <tabBarItem key="tabBarItem" title="Garden" image="leaf" catalog="system" id="X4v-jX-WHO"/>
                     <navigationItem key="navigationItem" id="PYO-Xp-VS8"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
@@ -270,20 +269,14 @@
         <!--DiseaseDetect-->
         <scene sceneID="qRq-FI-kaH">
             <objects>
-                <viewController id="WGC-yV-Chw" userLabel="DiseaseDetect" sceneMemberID="viewController">
+                <viewController id="WGC-yV-Chw" userLabel="DiseaseDetect" customClass="DiagnosisView" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIi-Xh-UO7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRk-9O-Nmc">
-                                <rect key="frame" x="20" y="64" width="350" height="677"/>
+                                <rect key="frame" x="20" y="64" width="350" height="726"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May let you know possible disease" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-kp-ej8">
-                                        <rect key="frame" x="71.666666666666686" y="642" width="207" height="12"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i3-g7-XBs">
                                         <rect key="frame" x="81" y="0.0" width="188" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
@@ -292,15 +285,15 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take picture of your plant's leaf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-hb-49U">
                                         <rect key="frame" x="20" y="70" width="310" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FqN-lu-VpH">
-                                        <rect key="frame" x="20" y="110.33333333333334" width="310" height="511.66666666666663"/>
+                                        <rect key="frame" x="20" y="150.33333333333331" width="310" height="520.66666666666674"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to take picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf9-ag-fik">
-                                                <rect key="frame" x="65" y="245.33333333333334" width="180" height="21.000000000000028"/>
+                                                <rect key="frame" x="65" y="250" width="180" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -316,19 +309,25 @@
                                             <outletCollection property="gestureRecognizers" destination="FW6-g0-MIj" appends="YES" id="SWL-uH-YkR"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May let you know possible disease" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-kp-ej8">
+                                        <rect key="frame" x="71.666666666666686" y="100.33333333333334" width="207" height="12"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="FqN-lu-VpH" firstAttribute="leading" secondItem="YRk-9O-Nmc" secondAttribute="leading" constant="20" id="0dC-4m-m11"/>
                                     <constraint firstItem="vQh-hb-49U" firstAttribute="leading" secondItem="YRk-9O-Nmc" secondAttribute="leading" constant="20" id="1bl-ZM-p5H"/>
-                                    <constraint firstAttribute="bottom" secondItem="VHU-kp-ej8" secondAttribute="bottom" constant="23" id="1sl-IC-xvr"/>
                                     <constraint firstItem="1i3-g7-XBs" firstAttribute="centerX" secondItem="YRk-9O-Nmc" secondAttribute="centerX" id="960-FC-3rO"/>
-                                    <constraint firstItem="VHU-kp-ej8" firstAttribute="top" secondItem="FqN-lu-VpH" secondAttribute="bottom" constant="20" id="Dzw-fn-jOx"/>
+                                    <constraint firstAttribute="bottom" secondItem="FqN-lu-VpH" secondAttribute="bottom" constant="55" id="Blm-NP-SWV"/>
                                     <constraint firstItem="VHU-kp-ej8" firstAttribute="centerX" secondItem="YRk-9O-Nmc" secondAttribute="centerX" id="JUr-lh-xNs"/>
+                                    <constraint firstItem="VHU-kp-ej8" firstAttribute="top" secondItem="vQh-hb-49U" secondAttribute="bottom" constant="10" id="XAL-Da-aSF"/>
                                     <constraint firstItem="vQh-hb-49U" firstAttribute="top" secondItem="1i3-g7-XBs" secondAttribute="bottom" constant="50" id="XPZ-R4-F4u"/>
                                     <constraint firstAttribute="trailing" secondItem="FqN-lu-VpH" secondAttribute="trailing" constant="20" id="erD-nU-jm8"/>
                                     <constraint firstAttribute="trailing" secondItem="vQh-hb-49U" secondAttribute="trailing" constant="20" id="g7P-Lv-bfx"/>
-                                    <constraint firstItem="FqN-lu-VpH" firstAttribute="top" secondItem="vQh-hb-49U" secondAttribute="bottom" constant="20" id="qOD-JR-Fe5"/>
+                                    <constraint firstItem="FqN-lu-VpH" firstAttribute="top" secondItem="vQh-hb-49U" secondAttribute="bottom" constant="60" id="qOD-JR-Fe5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -343,11 +342,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SelfCheck" image="camera" catalog="system" id="YCe-JQ-iln"/>
+                    <connections>
+                        <outlet property="OnTapGesture" destination="FqN-lu-VpH" id="dHi-VS-Gjj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA8-ir-Ml3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FW6-g0-MIj"/>
+                <tapGestureRecognizer id="FW6-g0-MIj">
+                    <connections>
+                        <outlet property="delegate" destination="FqN-lu-VpH" id="GJg-0v-eel"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2385" y="891"/>
+            <point key="canvasLocation" x="2982" y="-838"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="x99-xP-Xtj">
@@ -492,17 +498,23 @@
                     </tabBar>
                     <connections>
                         <segue destination="WM3-Ov-dBX" kind="relationship" relationship="viewControllers" id="7xi-JW-aPw"/>
-                        <segue destination="WGC-yV-Chw" kind="relationship" relationship="viewControllers" id="Ir9-GR-Qdt"/>
+                        <segue destination="oj0-gR-Umj" kind="relationship" relationship="viewControllers" id="cx2-pZ-lvy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPn-9a-BxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476.8115942028987" y="137.94642857142856"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Diagnosis-->
         <scene sceneID="F0g-D6-ukg">
             <objects>
-                <viewController id="oj0-gR-Umj" customClass="MainViewController" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRY-Sc-emP" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q5N-pZ-msh" userLabel="Single-Tap Recognizer">
+                    <connections>
+                        <action selector="singleTap" destination="oj0-gR-Umj" id="D2l-Ff-3EM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <viewController id="oj0-gR-Umj" customClass="DiagnosisView" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDM-eR-5jO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -510,13 +522,9 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBH-VS-mnM">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="q5N-pZ-msh" appends="YES" id="gqd-78-iXA"/>
-                                    <outletCollection property="gestureRecognizers" destination="2ha-tK-ZYo" appends="YES" id="Feg-XJ-yP7"/>
-                                </connections>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-qa-9TB" userLabel="Prediction View">
-                                <rect key="frame" x="20" y="743.66666666666663" width="188" height="60.333333333333371"/>
+                                <rect key="frame" x="20" y="703.66666666666663" width="188" height="60.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Predictions go here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUZ-lH-Y3g" userLabel="Prediction Label">
                                         <rect key="frame" x="20" y="20" width="148" height="20.333333333333329"/>
@@ -532,54 +540,88 @@
                                     <constraint firstAttribute="bottom" secondItem="UUZ-lH-Y3g" secondAttribute="bottom" constant="20" symbolic="YES" id="tSJ-pD-et8"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-kR-cZX" userLabel="Startup Prompts">
-                                <rect key="frame" x="56" y="286.33333333333331" width="278.33333333333331" height="68"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cF-jh-DGa">
+                                <rect key="frame" x="20" y="84" width="350" height="657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One finger tap for camera." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-Lh-Pqc" userLabel="Startup Prompt Label1">
-                                        <rect key="frame" x="0.0" y="0.0" width="278.33333333333331" height="30"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take picture of your plant's leaf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8S-cl-dzO">
+                                        <rect key="frame" x="47.333333333333329" y="72" width="255.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two finger tap for photos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKg-Ph-e4A" userLabel="Startup Prompt Label 2">
-                                        <rect key="frame" x="0.0" y="38" width="278.33333333333331" height="30"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiR-jp-g45">
+                                        <rect key="frame" x="40" y="164" width="270" height="453"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to take picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHt-JP-DGO">
+                                                <rect key="frame" x="45" y="216" width="180" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="yHt-JP-DGO" firstAttribute="centerX" secondItem="xiR-jp-g45" secondAttribute="centerX" id="UPB-z7-qL5"/>
+                                            <constraint firstItem="yHt-JP-DGO" firstAttribute="centerY" secondItem="xiR-jp-g45" secondAttribute="centerY" id="wh4-HO-3oe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="q5N-pZ-msh" appends="YES" id="KF0-Ob-scO"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May let you know possible disease" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkZ-5a-eMp">
+                                        <rect key="frame" x="71.666666666666686" y="107.33333333333334" width="207" height="12"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="12"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xiR-jp-g45" secondAttribute="bottom" constant="40" id="5qS-q3-rrX"/>
+                                    <constraint firstItem="q8S-cl-dzO" firstAttribute="centerX" secondItem="9cF-jh-DGa" secondAttribute="centerX" id="ENr-r3-z9y"/>
+                                    <constraint firstItem="q8S-cl-dzO" firstAttribute="top" secondItem="9cF-jh-DGa" secondAttribute="top" constant="72" id="NqQ-nS-wpt"/>
+                                    <constraint firstItem="xiR-jp-g45" firstAttribute="leading" secondItem="9cF-jh-DGa" secondAttribute="leading" constant="40" id="RyN-Mf-Iy0"/>
+                                    <constraint firstItem="EkZ-5a-eMp" firstAttribute="centerX" secondItem="9cF-jh-DGa" secondAttribute="centerX" id="d5a-nI-30F"/>
+                                    <constraint firstItem="EkZ-5a-eMp" firstAttribute="top" secondItem="q8S-cl-dzO" secondAttribute="bottom" constant="15" id="iwJ-Ys-8GY"/>
+                                    <constraint firstAttribute="trailing" secondItem="xiR-jp-g45" secondAttribute="trailing" constant="40" id="m1O-Jb-gtu"/>
+                                    <constraint firstItem="xiR-jp-g45" firstAttribute="top" secondItem="EkZ-5a-eMp" secondAttribute="bottom" constant="44.666666666666657" id="xfY-kd-zkd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-if-v7B">
+                                <rect key="frame" x="117.66666666666669" y="44" width="155" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6sb-vq-DAy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aBH-VS-mnM" firstAttribute="leading" secondItem="jDM-eR-5jO" secondAttribute="leading" id="1R7-zl-HvP"/>
+                            <constraint firstItem="6sb-vq-DAy" firstAttribute="bottom" secondItem="9cF-jh-DGa" secondAttribute="bottom" constant="20" id="1wY-GC-bdn"/>
+                            <constraint firstItem="9cF-jh-DGa" firstAttribute="leading" secondItem="6sb-vq-DAy" secondAttribute="leading" constant="20" id="2Km-JP-XEq"/>
+                            <constraint firstItem="6sb-vq-DAy" firstAttribute="trailing" secondItem="9cF-jh-DGa" secondAttribute="trailing" constant="20" id="3Mb-mQ-nSE"/>
                             <constraint firstItem="aBH-VS-mnM" firstAttribute="top" secondItem="jDM-eR-5jO" secondAttribute="top" id="CCB-hv-AOy"/>
+                            <constraint firstItem="byZ-if-v7B" firstAttribute="centerX" secondItem="aBH-VS-mnM" secondAttribute="centerX" id="RPy-D1-RAK"/>
                             <constraint firstItem="aBH-VS-mnM" firstAttribute="centerY" secondItem="jDM-eR-5jO" secondAttribute="centerY" id="SbC-Rf-BS8"/>
-                            <constraint firstItem="wfC-qa-9TB" firstAttribute="bottom" secondItem="aBH-VS-mnM" secondAttribute="bottom" constant="-40" id="Tiz-KJ-RtK"/>
+                            <constraint firstItem="wfC-qa-9TB" firstAttribute="bottom" secondItem="aBH-VS-mnM" secondAttribute="bottom" constant="-80" id="Tiz-KJ-RtK"/>
+                            <constraint firstItem="9cF-jh-DGa" firstAttribute="top" secondItem="byZ-if-v7B" secondAttribute="bottom" constant="20" id="VxM-Co-3B1"/>
                             <constraint firstItem="aBH-VS-mnM" firstAttribute="trailing" secondItem="jDM-eR-5jO" secondAttribute="trailing" id="YoX-Cd-0CR"/>
                             <constraint firstItem="wfC-qa-9TB" firstAttribute="leading" secondItem="jDM-eR-5jO" secondAttribute="leading" constant="20" id="ZF9-7a-0rG"/>
-                            <constraint firstItem="qRA-kR-cZX" firstAttribute="centerY" secondItem="6sb-vq-DAy" secondAttribute="centerY" multiplier="0.75" id="iAl-Sl-oCw"/>
-                            <constraint firstItem="qRA-kR-cZX" firstAttribute="centerX" secondItem="6sb-vq-DAy" secondAttribute="centerX" id="lUd-gL-MZW"/>
+                            <constraint firstItem="byZ-if-v7B" firstAttribute="top" secondItem="6sb-vq-DAy" secondAttribute="top" id="kyE-lt-AQw"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Diagnosis" image="magnifyingglass" catalog="system" id="e76-7s-US2"/>
                     <connections>
-                        <outlet property="imageView" destination="aBH-VS-mnM" id="f32-eT-gX2"/>
-                        <outlet property="predictionLabel" destination="UUZ-lH-Y3g" id="xdI-Qh-dPN"/>
-                        <outlet property="startupPrompts" destination="qRA-kR-cZX" id="qKa-H9-FGp"/>
+                        <outlet property="TabBarItem" destination="e76-7s-US2" id="Abl-lp-mhj"/>
+                        <outlet property="UISuperView" destination="9cF-jh-DGa" id="5Vp-Cu-LYE"/>
+                        <outlet property="imageView" destination="aBH-VS-mnM" id="EjF-cS-vWy"/>
+                        <outlet property="predictionLabel" destination="UUZ-lH-Y3g" id="P84-CK-ZB9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lRY-Sc-emP" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="q5N-pZ-msh" userLabel="Single-Tap Recognizer">
-                    <connections>
-                        <action selector="singleTap" destination="oj0-gR-Umj" id="4Q6-Iv-HRg"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTouchesRequired="2" id="2ha-tK-ZYo" userLabel="Double-Tap Recognizer">
-                    <connections>
-                        <action selector="doubleTap" destination="oj0-gR-Umj" id="WQX-Bz-iZ8"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3103" y="891"/>
+            <point key="canvasLocation" x="2385" y="827"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CqT-xr-0XG">
@@ -633,13 +675,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz8-H3-8D5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3864" y="902"/>
+            <point key="canvasLocation" x="3146" y="827"/>
         </scene>
     </scenes>
     <resources>
         <image name="LogInPicture" width="219" height="209"/>
         <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="leaf" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="MainColor">

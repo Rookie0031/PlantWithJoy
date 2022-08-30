@@ -7,8 +7,7 @@ Adds the camera picker support to the main view controller.
 
 import UIKit
 
-extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    /// Creates a controller that gives the user a view they can use to take a photo with the device's camera.
+extension DiagnosisView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var cameraPicker: UIImagePickerController {
         let cameraPicker = UIImagePickerController()
         cameraPicker.delegate = self
@@ -16,10 +15,6 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         return cameraPicker
     }
 
-    /// The delegate method UIKit calls when the user takes a photo with the camera.
-    /// - Parameters:
-    ///   - picker: A picker controller the `cameraPicker` property created.
-    ///   - info: A dictionary that contains the photo.
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true)

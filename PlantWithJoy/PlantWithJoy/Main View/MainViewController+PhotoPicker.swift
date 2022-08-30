@@ -7,7 +7,7 @@ Adds the photo picker support to the main view controller.
 
 import PhotosUI
 
-extension MainViewController: PHPickerViewControllerDelegate {
+extension DiagnosisView: PHPickerViewControllerDelegate {
     /// Creates a controller that gives the user a view they can use to select a photo from the device's library.
     var photoPicker: PHPickerViewController {
         var config = PHPickerConfiguration()

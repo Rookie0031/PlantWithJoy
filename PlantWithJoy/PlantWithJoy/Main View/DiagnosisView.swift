@@ -7,9 +7,10 @@ The view controller that selects an image and makes a prediction using Vision an
 
 import UIKit
 
-class MainViewController: UIViewController {
+class DiagnosisView: UIViewController {
     var firstRun = true
 
+    @IBOutlet weak var UISuperView: UIView!
     /// A predictor instance that uses Vision and Core ML to generate prediction strings from a photo.
     let imagePredictor = ImagePredictor()
 
@@ -17,37 +18,38 @@ class MainViewController: UIViewController {
     let predictionsToShow = 2
 
     // MARK: Main storyboard outlets
-    @IBOutlet weak var startupPrompts: UIStackView!
-    @IBOutlet weak var imageView: UIImageView!
+    
+    
     @IBOutlet weak var predictionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
 }
 
-extension MainViewController {
+extension DiagnosisView {
     // MARK: Main storyboard actions
     /// The method the storyboard calls when the user one-finger taps the screen.
+    
     @IBAction func singleTap() {
         // Show options for the source picker only if the camera is available.
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
             present(photoPicker, animated: false)
             return
         }
+        print("CameraPicker 작동")
 
         present(cameraPicker, animated: false)
     }
 
     /// The method the storyboard calls when the user two-finger taps the screen.
-    @IBAction func doubleTap() {
-        present(photoPicker, animated: false)
-    }
 }
 
-extension MainViewController {
+extension DiagnosisView {
     // MARK: Main storyboard updates
     /// Updates the storyboard's image view.
     /// - Parameter image: An image.
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
             self.imageView.image = image
+            self.UISuperView.isHidden = true
         }
     }
 
@@ -63,7 +65,7 @@ extension MainViewController {
             DispatchQueue.main.async {
                 self.firstRun = false
                 self.predictionLabel.superview?.isHidden = false
-                self.startupPrompts.isHidden = true
+//                self.startupPrompts.isHidden = true
             }
         }
     }
@@ -80,7 +82,7 @@ extension MainViewController {
 
 }
 
-extension MainViewController {
+extension DiagnosisView {
     // MARK: Image prediction methods
     /// Sends a photo to the Image Predictor to get a prediction of its content.
     /// - Parameter image: A photo.

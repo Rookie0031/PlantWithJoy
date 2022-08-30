@@ -13,7 +13,7 @@
 		9A7102AF28A1D294005441DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102AD28A1D294005441DD /* Main.storyboard */; };
 		9A7102B128A1D295005441DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102B028A1D295005441DD /* Assets.xcassets */; };
 		9A7102B428A1D295005441DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102B228A1D295005441DD /* LaunchScreen.storyboard */; };
-		9AAAC46D28BE2A0200291C2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46828BE2A0200291C2C /* MainViewController.swift */; };
+		9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */; };
 		9AAAC46F28BE2A0200291C2C /* MainViewController+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46B28BE2A0200291C2C /* MainViewController+CameraPicker.swift */; };
 		9AAAC47028BE2A0200291C2C /* MainViewController+PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46C28BE2A0200291C2C /* MainViewController+PhotoPicker.swift */; };
 		9AAAC47328BE2A0F00291C2C /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47228BE2A0F00291C2C /* ImagePredictor.swift */; };
@@ -35,7 +35,7 @@
 		9A7102B028A1D295005441DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7102B328A1D295005441DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A7102B528A1D295005441DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AAAC46828BE2A0200291C2C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
 		9AAAC46B28BE2A0200291C2C /* MainViewController+CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+CameraPicker.swift"; sourceTree = "<group>"; };
 		9AAAC46C28BE2A0200291C2C /* MainViewController+PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+PhotoPicker.swift"; sourceTree = "<group>"; };
 		9AAAC47228BE2A0F00291C2C /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		9AAAC46728BE2A0200291C2C /* Main View */ = {
 			isa = PBXGroup;
 			children = (
-				9AAAC46828BE2A0200291C2C /* MainViewController.swift */,
+				9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */,
 				9AAAC46B28BE2A0200291C2C /* MainViewController+CameraPicker.swift */,
 				9AAAC46C28BE2A0200291C2C /* MainViewController+PhotoPicker.swift */,
 			);
@@ -217,7 +217,7 @@
 				9AAAC48228BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
 				9AAAC47328BE2A0F00291C2C /* ImagePredictor.swift in Sources */,
-				9AAAC46D28BE2A0200291C2C /* MainViewController.swift in Sources */,
+				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* MainViewController+CameraPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
