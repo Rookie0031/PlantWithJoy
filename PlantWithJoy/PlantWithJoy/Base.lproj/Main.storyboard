@@ -115,7 +115,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Reminder for Plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Wb-IAu">
                                         <rect key="frame" x="88" y="0.0" width="176" height="168.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -123,7 +123,7 @@
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WKD-WW-5qV">
                                 <rect key="frame" x="20" y="402.33333333333331" width="352.33333333333331" height="173.33333333333331"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewLayout key="collectionViewLayout" id="ZZA-JF-e1R"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kro-e9-zt9">
@@ -176,7 +176,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjj-CV-TiP">
                                         <rect key="frame" x="121.33333333333334" y="0.0" width="107.33333333333334" height="84.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -508,12 +508,6 @@
         <!--Diagnosis-->
         <scene sceneID="F0g-D6-ukg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lRY-Sc-emP" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="q5N-pZ-msh" userLabel="Single-Tap Recognizer">
-                    <connections>
-                        <action selector="singleTap" destination="oj0-gR-Umj" id="D2l-Ff-3EM"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <viewController id="oj0-gR-Umj" customClass="DiagnosisView" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDM-eR-5jO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -620,6 +614,12 @@
                         <outlet property="predictionLabel" destination="UUZ-lH-Y3g" id="P84-CK-ZB9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRY-Sc-emP" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q5N-pZ-msh" userLabel="Single-Tap Recognizer">
+                    <connections>
+                        <action selector="singleTap" destination="oj0-gR-Umj" id="D2l-Ff-3EM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2385" y="827"/>
         </scene>
