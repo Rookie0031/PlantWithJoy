@@ -598,6 +598,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYH-et-QYC" userLabel="Prediction View">
+                                        <rect key="frame" x="24" y="0.0" width="134" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -633,6 +638,9 @@
                     <connections>
                         <outlet property="TabBarItem" destination="e76-7s-US2" id="Abl-lp-mhj"/>
                         <outlet property="UISuperView" destination="jDM-eR-5jO" id="Wwl-cz-Uxw"/>
+                        <outlet property="guideLabel" destination="EkZ-5a-eMp" id="WE1-ak-p02"/>
+                        <outlet property="introLabel" destination="q8S-cl-dzO" id="Ywi-ji-deP"/>
+                        <outlet property="pictureGuideView" destination="xiR-jp-g45" id="l9i-Dc-mHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRY-Sc-emP" sceneMemberID="firstResponder"/>
@@ -642,12 +650,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1475" y="938"/>
+            <point key="canvasLocation" x="1473.8461538461538" y="937.67772511848341"/>
         </scene>
-        <!--View Controller-->
+        <!--Diagnosis View-->
         <scene sceneID="CqT-xr-0XG">
             <objects>
-                <viewController id="S3X-9u-lwx" sceneMemberID="viewController">
+                <viewController id="S3X-9u-lwx" customClass="DiagnosisView" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tif-qC-1h4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

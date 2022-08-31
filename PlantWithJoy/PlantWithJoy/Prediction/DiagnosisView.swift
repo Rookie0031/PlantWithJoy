@@ -14,12 +14,14 @@ class DiagnosisView: UIViewController {
     let plantDiseasePrediction = PlantDiseasePrediction()
     let predictionsToShow = 3
 
-    // Programmatically declared
-    var reportView: UIView = {
-        let baseView = UIView()
-        baseView.backgroundColor = .blue
-        return baseView
-    }()
+    @IBOutlet weak var introLabel: UILabel!
+    @IBOutlet weak var guideLabel: UILabel!
+    //    var reportView: UIView = {
+    @IBOutlet weak var pictureGuideView: UIView!
+    //        let baseView = UIView()
+//        baseView.backgroundColor = .blue
+//        return baseView
+//    }()
     
     var reportViewTitle: UILabel = {
         let label = UILabel()
@@ -67,29 +69,31 @@ class DiagnosisView: UIViewController {
         button.titleLabel?.textColor = .white
         return button
     }()
+    
+    @IBOutlet var UISuperView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubview()
-        setConstraintOption()
-        setConstraintForAll()
-        reportView.isHidden = true
+//        configureSubview()
+//        setConstraintOption()
+//        setConstraintForAll()
+//        reportView.isHidden = true
 
     }
 
     private func configureSubview() {
-        self.view.addSubview(reportView)
-        self.reportView.addSubview(reportViewTitle)
-        self.reportView.addSubview(plantStatusLabel)
-        self.reportView.addSubview(predictionLabel)
-        self.reportView.addSubview(possibleDiseaseLabel)
-        self.reportView.addSubview(possibleDiseaseDiagnosis)
-        self.reportView.addSubview(imageView)
-        self.reportView.addSubview(seeAlsoButton)
+//        self.view.addSubview(reportView)
+        self.view.addSubview(reportViewTitle)
+        self.view.addSubview(plantStatusLabel)
+        self.view.addSubview(predictionLabel)
+        self.view.addSubview(possibleDiseaseLabel)
+        self.view.addSubview(possibleDiseaseDiagnosis)
+        self.view.addSubview(imageView)
+        self.view.addSubview(seeAlsoButton)
     }
 
     private func setConstraintOption() {
-        reportView.translatesAutoresizingMaskIntoConstraints = false
+//        reportView.translatesAutoresizingMaskIntoConstraints = false
         reportViewTitle.translatesAutoresizingMaskIntoConstraints = false
         plantStatusLabel.translatesAutoresizingMaskIntoConstraints = false
         predictionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -101,12 +105,12 @@ class DiagnosisView: UIViewController {
     }
 
     private func setConstraintForAll() {
-        NSLayoutConstraint.activate([
-            reportView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            reportView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            reportView.topAnchor.constraint(equalTo: view.topAnchor),
-            reportView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            reportView.leftAnchor.constraint(equalTo: view.leftAnchor),
+//            reportView.rightAnchor.constraint(equalTo: view.rightAnchor),
+//            reportView.topAnchor.constraint(equalTo: view.topAnchor),
+//            reportView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//        ])
 
         NSLayoutConstraint.activate([
             reportViewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -115,12 +119,17 @@ class DiagnosisView: UIViewController {
 
         NSLayoutConstraint.activate([
             plantStatusLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-            plantStatusLabel.topAnchor.constraint(equalTo: reportViewTitle.bottomAnchor, constant: 15)
+            plantStatusLabel.topAnchor.constraint(equalTo: reportViewTitle.bottomAnchor, constant: 100)
+        ])
+        
+        NSLayoutConstraint.activate([
+            predictionLabel.leftAnchor.constraint(equalTo: plantStatusLabel.leftAnchor),
+            predictionLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor, constant: 30)
         ])
 
         NSLayoutConstraint.activate([
             possibleDiseaseLabel.leftAnchor.constraint(equalTo: plantStatusLabel.leftAnchor),
-            possibleDiseaseLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor, constant: 70)
+            possibleDiseaseLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor, constant: 100)
         ])
 
         NSLayoutConstraint.activate([
@@ -130,9 +139,9 @@ class DiagnosisView: UIViewController {
 
         NSLayoutConstraint.activate([
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-            imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 40),
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
+            imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 350),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -130)
         ])
 
         NSLayoutConstraint.activate([
@@ -144,10 +153,6 @@ class DiagnosisView: UIViewController {
 
     }
 
-    @IBOutlet var UISuperView: UIView!
-    // StoryBoard Declared
-//    @IBOutlet weak var predictionLabel: UILabel!
-//    @IBOutlet weak var imageView: UIImageView!
 }
 
 extension DiagnosisView {
@@ -166,7 +171,7 @@ extension DiagnosisView {
 extension DiagnosisView {
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
-            self.reportView.isHidden = false
+//            self.reportView.isHidden = false
             self.imageView.image = image
             self.UISuperView.isHidden = true
         }
@@ -174,8 +179,14 @@ extension DiagnosisView {
 
     func updatePredictionLabel(_ message: String) {
         DispatchQueue.main.async {
-
             self.predictionLabel.text = message
+            self.introLabel.isHidden = true
+            self.guideLabel.isHidden = true
+            self.pictureGuideView.isHidden = true
+            
+            self.configureSubview()
+            self.setConstraintOption()
+            self.setConstraintForAll()
         }
 
         if firstRun {
