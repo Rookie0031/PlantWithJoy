@@ -6,17 +6,148 @@ The view controller that selects an image and makes a prediction using Vision an
 */
 
 import UIKit
+import AVFoundation
 
 class DiagnosisView: UIViewController {
     var firstRun = true
+    let plantStatusPrediction = PlantStatusPrediction()
+    let plantDiseasePrediction = PlantDiseasePrediction()
+    let predictionsToShow = 3
 
-    @IBOutlet weak var UISuperView: UIView!
-    let imagePredictor = ImagePredictor()
-    let predictionsToShow = 5
+    // Programmatically declared
+    var reportView: UIView = {
+        let baseView = UIView()
+        baseView.backgroundColor = .blue
+        return baseView
+    }()
     
-    
-    @IBOutlet weak var predictionLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    var reportViewTitle: UILabel = {
+        let label = UILabel()
+        label.text = "Report"
+        label.textColor = .black
+        return label
+    }()
+
+    var plantStatusLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Plant Status"
+        label.textColor = .black
+        return label
+    }()
+
+    var predictionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Diagnosis Result"
+        label.textColor = .black
+        return label
+    }()
+
+    var possibleDiseaseLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Possible Disease"
+        label.textColor = .black
+        return label
+    }()
+
+    var possibleDiseaseDiagnosis: UILabel = {
+        let label = UILabel()
+        label.text = "Rust"
+        label.textColor = .black
+        return label
+    }()
+
+    var imageView: UIImageView = {
+        let image = UIImageView()
+        return image
+    }()
+
+    var seeAlsoButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("See Also", for: .normal)
+        button.titleLabel?.textColor = .white
+        return button
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureSubview()
+        setConstraintOption()
+        setConstraintForAll()
+        reportView.isHidden = true
+
+    }
+
+    private func configureSubview() {
+        self.view.addSubview(reportView)
+        self.reportView.addSubview(reportViewTitle)
+        self.reportView.addSubview(plantStatusLabel)
+        self.reportView.addSubview(predictionLabel)
+        self.reportView.addSubview(possibleDiseaseLabel)
+        self.reportView.addSubview(possibleDiseaseDiagnosis)
+        self.reportView.addSubview(imageView)
+        self.reportView.addSubview(seeAlsoButton)
+    }
+
+    private func setConstraintOption() {
+        reportView.translatesAutoresizingMaskIntoConstraints = false
+        reportViewTitle.translatesAutoresizingMaskIntoConstraints = false
+        plantStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+        predictionLabel.translatesAutoresizingMaskIntoConstraints = false
+        possibleDiseaseLabel.translatesAutoresizingMaskIntoConstraints = false
+        possibleDiseaseDiagnosis.translatesAutoresizingMaskIntoConstraints = false
+        plantStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        seeAlsoButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    private func setConstraintForAll() {
+        NSLayoutConstraint.activate([
+            reportView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            reportView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            reportView.topAnchor.constraint(equalTo: view.topAnchor),
+            reportView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            reportViewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            reportViewTitle.topAnchor.constraint(equalTo: view.topAnchor),
+        ])
+
+        NSLayoutConstraint.activate([
+            plantStatusLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+            plantStatusLabel.topAnchor.constraint(equalTo: reportViewTitle.bottomAnchor, constant: 15)
+        ])
+
+        NSLayoutConstraint.activate([
+            possibleDiseaseLabel.leftAnchor.constraint(equalTo: plantStatusLabel.leftAnchor),
+            possibleDiseaseLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor, constant: 70)
+        ])
+
+        NSLayoutConstraint.activate([
+            possibleDiseaseDiagnosis.leftAnchor.constraint(equalTo: possibleDiseaseLabel.leftAnchor),
+            possibleDiseaseDiagnosis.topAnchor.constraint(equalTo: possibleDiseaseLabel.bottomAnchor, constant: 15),
+        ])
+
+        NSLayoutConstraint.activate([
+            imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+            imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 40),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 130)
+        ])
+
+        NSLayoutConstraint.activate([
+            seeAlsoButton.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 40),
+            seeAlsoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 40),
+            seeAlsoButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
+            seeAlsoButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 70)
+        ])
+
+    }
+
+    @IBOutlet var UISuperView: UIView!
+    // StoryBoard Declared
+//    @IBOutlet weak var predictionLabel: UILabel!
+//    @IBOutlet weak var imageView: UIImageView!
 }
 
 extension DiagnosisView {
@@ -35,6 +166,7 @@ extension DiagnosisView {
 extension DiagnosisView {
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
+            self.reportView.isHidden = false
             self.imageView.image = image
             self.UISuperView.isHidden = true
         }
@@ -42,6 +174,7 @@ extension DiagnosisView {
 
     func updatePredictionLabel(_ message: String) {
         DispatchQueue.main.async {
+
             self.predictionLabel.text = message
         }
 
@@ -58,23 +191,23 @@ extension DiagnosisView {
         updatePredictionLabel("Making predictions for the photo...")
 
         DispatchQueue.global(qos: .userInitiated).async {
-            self.classifyImage(photo)
+            self.classifyStatus(photo)
         }
     }
 
 }
 
 extension DiagnosisView {
-    private func classifyImage(_ image: UIImage) {
+    private func classifyStatus(_ image: UIImage) {
         do {
-            try self.imagePredictor.makePredictions(for: image,
+            try self.plantStatusPrediction.makePredictions(for: image,
                                                     completionHandler: imagePredictionHandler)
         } catch {
             print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
         }
     }
 
-    private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
+    private func imagePredictionHandler(_ predictions: [PlantStatusPrediction.Prediction]?) {
         guard let predictions = predictions else {
             updatePredictionLabel("No predictions. (Check console log.)")
             return
@@ -86,7 +219,44 @@ extension DiagnosisView {
         updatePredictionLabel(predictionString)
     }
 
-    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
+    private func formatPredictions(_ predictions: [PlantStatusPrediction.Prediction]) -> [String] {
+        let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
+            var name = prediction.classification
+
+            if let firstComma = name.firstIndex(of: ",") {
+                name = String(name.prefix(upTo: firstComma))
+            }
+
+            return "\(name) - \(prediction.confidencePercentage)%"
+        }
+
+        return topPredictions
+    }
+}
+
+extension DiagnosisView {
+    private func classifyDisease(_ image: UIImage) {
+        do {
+            try self.plantDiseasePrediction.makePredictions(for: image,
+                                                    completionHandler: imagePredictionHandler)
+        } catch {
+            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
+        }
+    }
+
+    private func imagePredictionHandler(_ predictions: [PlantDiseasePrediction.Prediction]?) {
+        guard let predictions = predictions else {
+            updatePredictionLabel("No predictions. (Check console log.)")
+            return
+        }
+
+        let formattedPredictions = formatPredictions(predictions)
+
+        let predictionString = formattedPredictions.joined(separator: "\n")
+        updatePredictionLabel(predictionString)
+    }
+
+    private func formatPredictions(_ predictions: [PlantDiseasePrediction.Prediction]) -> [String] {
         let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
             var name = prediction.classification
 
