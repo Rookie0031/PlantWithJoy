@@ -16,13 +16,16 @@
 		9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */; };
 		9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46B28BE2A0200291C2C /* CameraPicker.swift */; };
 		9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46C28BE2A0200291C2C /* PhotoPicker.swift */; };
-		9AAAC47328BE2A0F00291C2C /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47228BE2A0F00291C2C /* ImagePredictor.swift */; };
+		9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */; };
 		9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */; };
 		9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
-		9AAAC48228BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47D28BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8D2A728C037EE00DD2709 /* TextExtension.swift */; };
+		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
+		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
+		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,14 +40,17 @@
 		9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
 		9AAAC46B28BE2A0200291C2C /* CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		9AAAC46C28BE2A0200291C2C /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
-		9AAAC47228BE2A0F00291C2C /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantStatusPrediction.swift; sourceTree = "<group>"; };
 		9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		9AAAC47C28BE2A3400291C2C /* NOTICE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE.txt; sourceTree = "<group>"; };
-		9AAAC47D28BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "PlantDiseaseClassification 1.mlmodel"; sourceTree = "<group>"; };
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A9A8D2A728C037EE00DD2709 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
+		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
+		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,8 @@
 		9AAAC47128BE2A0F00291C2C /* Image Predictor */ = {
 			isa = PBXGroup;
 			children = (
-				9AAAC47228BE2A0F00291C2C /* ImagePredictor.swift */,
+				9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */,
+				A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */,
 			);
 			path = "Image Predictor";
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 			children = (
 				9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */,
 				9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				A9A8D2A728C037EE00DD2709 /* TextExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -124,8 +132,9 @@
 		9AAAC47928BE2A3400291C2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */,
+				A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */,
 				9AAAC47C28BE2A3400291C2C /* NOTICE.txt */,
-				9AAAC47D28BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel */,
 				9AAAC47E28BE2A3400291C2C /* LICENSE.txt */,
 			);
 			path = Models;
@@ -205,16 +214,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */,
+				A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */,
 				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
 				9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */,
 				9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */,
 				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
-				9AAAC48228BE2A3400291C2C /* PlantDiseaseClassification 1.mlmodel in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
-				9AAAC47328BE2A0F00291C2C /* ImagePredictor.swift in Sources */,
+				9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */,
+				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
+				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
+				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
