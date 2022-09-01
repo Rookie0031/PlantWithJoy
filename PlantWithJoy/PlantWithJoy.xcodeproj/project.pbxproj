@@ -22,6 +22,7 @@
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8D2A728C037EE00DD2709 /* TextExtension.swift */; };
 		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
 		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
 		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
@@ -46,6 +47,7 @@
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A9A8D2A728C037EE00DD2709 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
 		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
 		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */,
 				9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				A9A8D2A728C037EE00DD2709 /* TextExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
 				9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */,
 				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
+				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
 				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,

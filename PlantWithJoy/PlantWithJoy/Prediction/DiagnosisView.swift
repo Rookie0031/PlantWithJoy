@@ -13,6 +13,7 @@ class DiagnosisView: UIViewController {
     let plantStatusPrediction = PlantStatusPrediction()
     let plantDiseasePrediction = PlantDiseasePrediction()
     let predictionsToShow = 3
+    let diseasePredictionsToShow = 3
 
     @IBOutlet weak var introLabel: UILabel!
     @IBOutlet weak var guideLabel: UILabel!
@@ -25,7 +26,7 @@ class DiagnosisView: UIViewController {
     
     var reportViewTitle: UILabel = {
         let label = UILabel()
-        label.text = "Report"
+//        label.text = "Report"
         label.textColor = .black
         return label
     }()
@@ -33,28 +34,29 @@ class DiagnosisView: UIViewController {
     var plantStatusLabel: UILabel = {
         let label = UILabel()
         label.text = "Plant Status"
-        label.textColor = .black
+        label.textColor = .lightGray
+        label.font = .systemFont(ofSize: 17)
+
         return label
     }()
 
-    var predictionLabel: UILabel = {
-        let label = UILabel()
+    var predictionLabel: UITextView = {
+        let label = UITextView()
         label.text = "Diagnosis Result"
-        label.textColor = .black
         return label
     }()
 
     var possibleDiseaseLabel: UILabel = {
         let label = UILabel()
         label.text = "Possible Disease"
-        label.textColor = .black
+        label.textColor = .lightGray
+        label.font = .systemFont(ofSize: 17)
         return label
     }()
 
-    var possibleDiseaseDiagnosis: UILabel = {
-        let label = UILabel()
+    var possibleDiseaseDiagnosis: UITextView = {
+        let label = UITextView()
         label.text = "Rust"
-        label.textColor = .black
         return label
     }()
 
@@ -72,14 +74,6 @@ class DiagnosisView: UIViewController {
     
     @IBOutlet var UISuperView: UIView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        configureSubview()
-//        setConstraintOption()
-//        setConstraintForAll()
-//        reportView.isHidden = true
-
-    }
 
     private func configureSubview() {
 //        self.view.addSubview(reportView)
@@ -105,12 +99,6 @@ class DiagnosisView: UIViewController {
     }
 
     private func setConstraintForAll() {
-//        NSLayoutConstraint.activate([
-//            reportView.leftAnchor.constraint(equalTo: view.leftAnchor),
-//            reportView.rightAnchor.constraint(equalTo: view.rightAnchor),
-//            reportView.topAnchor.constraint(equalTo: view.topAnchor),
-//            reportView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//        ])
 
         NSLayoutConstraint.activate([
             reportViewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -123,8 +111,10 @@ class DiagnosisView: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            predictionLabel.leftAnchor.constraint(equalTo: plantStatusLabel.leftAnchor),
-            predictionLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor, constant: 30)
+            predictionLabel.leadingAnchor.constraint(equalTo: plantStatusLabel.leadingAnchor, constant: 5),
+            predictionLabel.topAnchor.constraint(equalTo: plantStatusLabel.bottomAnchor),
+            predictionLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            predictionLabel.heightAnchor.constraint(equalToConstant: 300)
         ])
 
         NSLayoutConstraint.activate([
@@ -134,7 +124,9 @@ class DiagnosisView: UIViewController {
 
         NSLayoutConstraint.activate([
             possibleDiseaseDiagnosis.leftAnchor.constraint(equalTo: possibleDiseaseLabel.leftAnchor),
-            possibleDiseaseDiagnosis.topAnchor.constraint(equalTo: possibleDiseaseLabel.bottomAnchor, constant: 15),
+            possibleDiseaseDiagnosis.topAnchor.constraint(equalTo: possibleDiseaseLabel.bottomAnchor),
+            possibleDiseaseDiagnosis.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            possibleDiseaseDiagnosis.heightAnchor.constraint(equalToConstant: 300)
         ])
 
         NSLayoutConstraint.activate([
@@ -171,8 +163,8 @@ extension DiagnosisView {
 extension DiagnosisView {
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
-//            self.reportView.isHidden = false
             self.imageView.image = image
+            self.imageView.layer.cornerRadius = 50
             self.UISuperView.isHidden = true
         }
     }
@@ -180,6 +172,9 @@ extension DiagnosisView {
     func updatePredictionLabel(_ message: String) {
         DispatchQueue.main.async {
             self.predictionLabel.text = message
+            self.predictionLabel.setLineAndLetterSpacing(message)
+
+            print("upDate Prediction Label \(message)")
             self.introLabel.isHidden = true
             self.guideLabel.isHidden = true
             self.pictureGuideView.isHidden = true
@@ -197,17 +192,27 @@ extension DiagnosisView {
         }
     }
 
+    func updateDiseaseLabel(_ message: String) {
+        DispatchQueue.main.async {
+            self.possibleDiseaseDiagnosis.text = message
+            self.possibleDiseaseDiagnosis.setLineAndLetterSpacing(message)
+        }
+    }
+
     func userSelectedPhoto(_ photo: UIImage) {
         updateImage(photo)
         updatePredictionLabel("Making predictions for the photo...")
 
+        // 예측 모델 작동
         DispatchQueue.global(qos: .userInitiated).async {
             self.classifyStatus(photo)
+            self.classifyDisease(photo)
         }
     }
 
 }
 
+//Status 예측
 extension DiagnosisView {
     private func classifyStatus(_ image: UIImage) {
         do {
@@ -227,6 +232,7 @@ extension DiagnosisView {
         let formattedPredictions = formatPredictions(predictions)
 
         let predictionString = formattedPredictions.joined(separator: "\n")
+        print("Imagehandler의 라벨 \(predictionString)")
         updatePredictionLabel(predictionString)
     }
 
@@ -245,6 +251,7 @@ extension DiagnosisView {
     }
 }
 
+// Disease 예측
 extension DiagnosisView {
     private func classifyDisease(_ image: UIImage) {
         do {
@@ -257,14 +264,15 @@ extension DiagnosisView {
 
     private func imagePredictionHandler(_ predictions: [PlantDiseasePrediction.Prediction]?) {
         guard let predictions = predictions else {
-            updatePredictionLabel("No predictions. (Check console log.)")
+            updateDiseaseLabel("No predictions. (Check console log.)")
             return
         }
 
         let formattedPredictions = formatPredictions(predictions)
 
         let predictionString = formattedPredictions.joined(separator: "\n")
-        updatePredictionLabel(predictionString)
+        print("질병 예측하기 \(predictionString)")
+        updateDiseaseLabel(predictionString)
     }
 
     private func formatPredictions(_ predictions: [PlantDiseasePrediction.Prediction]) -> [String] {
