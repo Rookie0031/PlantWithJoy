@@ -9,21 +9,48 @@
 /* Begin PBXBuildFile section */
 		9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A728A1D294005441DD /* AppDelegate.swift */; };
 		9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A928A1D294005441DD /* SceneDelegate.swift */; };
-		9A7102AC28A1D294005441DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102AB28A1D294005441DD /* ViewController.swift */; };
+		9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102AB28A1D294005441DD /* GardenViewController.swift */; };
 		9A7102AF28A1D294005441DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102AD28A1D294005441DD /* Main.storyboard */; };
 		9A7102B128A1D295005441DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102B028A1D295005441DD /* Assets.xcassets */; };
 		9A7102B428A1D295005441DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7102B228A1D295005441DD /* LaunchScreen.storyboard */; };
+		9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */; };
+		9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46B28BE2A0200291C2C /* CameraPicker.swift */; };
+		9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC46C28BE2A0200291C2C /* PhotoPicker.swift */; };
+		9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */; };
+		9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */; };
+		9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
+		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
+		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8D2A728C037EE00DD2709 /* TextExtension.swift */; };
+		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
+		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
+		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A7102A428A1D294005441DD /* PlantWithJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantWithJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7102A728A1D294005441DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7102A928A1D294005441DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A7102AB28A1D294005441DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A7102AB28A1D294005441DD /* GardenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenViewController.swift; sourceTree = "<group>"; };
 		9A7102AE28A1D294005441DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A7102B028A1D295005441DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7102B328A1D295005441DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A7102B528A1D295005441DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
+		9AAAC46B28BE2A0200291C2C /* CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		9AAAC46C28BE2A0200291C2C /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantStatusPrediction.swift; sourceTree = "<group>"; };
+		9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
+		9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		9AAAC47C28BE2A3400291C2C /* NOTICE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE.txt; sourceTree = "<group>"; };
+		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
+		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A9A8D2A728C037EE00DD2709 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
+		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
+		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +83,61 @@
 		9A7102A628A1D294005441DD /* PlantWithJoy */ = {
 			isa = PBXGroup;
 			children = (
+				9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */,
 				9A7102A728A1D294005441DD /* AppDelegate.swift */,
 				9A7102A928A1D294005441DD /* SceneDelegate.swift */,
-				9A7102AB28A1D294005441DD /* ViewController.swift */,
+				9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */,
+				9A7102AB28A1D294005441DD /* GardenViewController.swift */,
+				9AAAC47928BE2A3400291C2C /* Models */,
+				9AAAC47428BE2A1900291C2C /* Extensions */,
+				9AAAC47128BE2A0F00291C2C /* Image Predictor */,
+				9AAAC46728BE2A0200291C2C /* Prediction */,
 				9A7102AD28A1D294005441DD /* Main.storyboard */,
 				9A7102B028A1D295005441DD /* Assets.xcassets */,
 				9A7102B228A1D295005441DD /* LaunchScreen.storyboard */,
 				9A7102B528A1D295005441DD /* Info.plist */,
 			);
 			path = PlantWithJoy;
+			sourceTree = "<group>";
+		};
+		9AAAC46728BE2A0200291C2C /* Prediction */ = {
+			isa = PBXGroup;
+			children = (
+				9AAAC46828BE2A0200291C2C /* DiagnosisView.swift */,
+				9AAAC46B28BE2A0200291C2C /* CameraPicker.swift */,
+				9AAAC46C28BE2A0200291C2C /* PhotoPicker.swift */,
+			);
+			path = Prediction;
+			sourceTree = "<group>";
+		};
+		9AAAC47128BE2A0F00291C2C /* Image Predictor */ = {
+			isa = PBXGroup;
+			children = (
+				9AAAC47228BE2A0F00291C2C /* PlantStatusPrediction.swift */,
+				A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */,
+			);
+			path = "Image Predictor";
+			sourceTree = "<group>";
+		};
+		9AAAC47428BE2A1900291C2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9AAAC47528BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift */,
+				9AAAC47628BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				A9A8D2A728C037EE00DD2709 /* TextExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9AAAC47928BE2A3400291C2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */,
+				A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */,
+				9AAAC47C28BE2A3400291C2C /* NOTICE.txt */,
+				9AAAC47E28BE2A3400291C2C /* LICENSE.txt */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +198,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */,
 				9A7102B428A1D295005441DD /* LaunchScreen.storyboard in Resources */,
 				9A7102B128A1D295005441DD /* Assets.xcassets in Resources */,
 				9A7102AF28A1D294005441DD /* Main.storyboard in Resources */,
+				9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7102AC28A1D294005441DD /* ViewController.swift in Sources */,
+				9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */,
+				A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */,
+				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
+				9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */,
+				9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */,
+				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
+				9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */,
+				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
+				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
+				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
+				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
+				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantWithJoy/PlantWithJoy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YYP248S73Y;
@@ -313,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantWithJoy/PlantWithJoy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YYP248S73Y;
