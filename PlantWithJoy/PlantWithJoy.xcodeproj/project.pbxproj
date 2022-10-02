@@ -22,10 +22,16 @@
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */; };
+		A97A08B928E87C5B00DCA2F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */; };
+		A97A08BB28E87D1700DCA2F0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08BA28E87D1700DCA2F0 /* TitleLabel.swift */; };
+		A97A08BE28E8806700DCA2F0 /* MainViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */; };
 		A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8D2A728C037EE00DD2709 /* TextExtension.swift */; };
 		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
 		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
 		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
+		A9EC184828E918D300E9E099 /* TestingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC184728E918D300E9E099 /* TestingCell.swift */; };
+		A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9EC184A28E92C5B00E9E099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +53,15 @@
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A97A08BA28E87D1700DCA2F0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DataSource.swift"; sourceTree = "<group>"; };
 		A9A8D2A728C037EE00DD2709 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
 		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
 		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
+		A9EC184728E918D300E9E099 /* TestingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 		9A7102A628A1D294005441DD /* PlantWithJoy */ = {
 			isa = PBXGroup;
 			children = (
+				A97A08B728E87C4800DCA2F0 /* Refactor */,
 				9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */,
 				9A7102A728A1D294005441DD /* AppDelegate.swift */,
 				9A7102A928A1D294005441DD /* SceneDelegate.swift */,
@@ -140,6 +153,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A97A08B728E87C4800DCA2F0 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				A9EC184628E918BE00E9E099 /* Cells */,
+				A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */,
+				A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */,
+				A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */,
+				A97A08BC28E87EB400DCA2F0 /* UIComponents */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
+		A97A08BC28E87EB400DCA2F0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A97A08BA28E87D1700DCA2F0 /* TitleLabel.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		A9EC184628E918BE00E9E099 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A9EC184728E918D300E9E099 /* TestingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +197,9 @@
 			dependencies = (
 			);
 			name = PlantWithJoy;
+			packageProductDependencies = (
+				A9EC184A28E92C5B00E9E099 /* SnapKit */,
+			);
 			productName = PlantWithJoy;
 			productReference = 9A7102A428A1D294005441DD /* PlantWithJoy.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 9A71029B28A1D294005441DD;
+			packageReferences = (
+				A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9A7102A528A1D294005441DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,9 +269,14 @@
 				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
 				9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */,
+				A97A08BE28E8806700DCA2F0 /* MainViewController+DataSource.swift in Sources */,
+				A97A08B928E87C5B00DCA2F0 /* MainViewController.swift in Sources */,
 				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
+				A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */,
+				A9EC184828E918D300E9E099 /* TestingCell.swift in Sources */,
 				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
+				A97A08BB28E87D1700DCA2F0 /* TitleLabel.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
 				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,
 			);
@@ -446,6 +498,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9EC184A28E92C5B00E9E099 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A71029C28A1D294005441DD /* Project object */;
 }
