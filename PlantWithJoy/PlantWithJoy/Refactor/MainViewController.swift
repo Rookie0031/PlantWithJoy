@@ -8,17 +8,38 @@ import UIKit
 import SnapKit
 import Foundation
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MainViewController: UIViewController {
+
+    private let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_:)))
+
+    private let collectionViewTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "The Growing Plants"
+        label.font.withSize(20)
+        return label
+    }()
+
+    private let collectionViewSubTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Manage your garden"
+        label.textColor = .systemGray3
+        label.font.withSize(14)
+        return label
+    }()
 
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .systemBlue
+        scrollView.backgroundColor = .clear
         scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
 
-    private let scrollViewContentView = UIView(frame: .zero)
+    private let scrollViewContentView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .clear
+        return view
+    }()
 
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
@@ -48,54 +69,39 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
         view.addSubview(scrollView)
         scrollView.addSubview(scrollViewContentView)
         scrollViewContentView.addSubview(collectionView)
+
+        scrollView.addSubview(collectionViewTitleLabel)
+        scrollView.addSubview(collectionViewSubTitleLabel)
     }
 
     private func configureUI() {
-        scrollView.frame = view.bounds
-        scrollViewContentView.frame = scrollView.bounds
-        collectionView.frame = scrollViewContentView.bounds
+        scrollView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        scrollViewContentView.snp.makeConstraints {
+            $0.edges.equalTo(scrollView.safeAreaLayoutGuide)
+        }
+        collectionViewTitleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(10)
+            $0.top.equalToSuperview().inset(20)
+        }
+        collectionViewSubTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(collectionViewTitleLabel.snp.bottom).inset(-5)
+            $0.leading.equalToSuperview().inset(10)
+        }
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading)
-            make.trailing.equalTo(view.snp.trailing)
-            make.top.equalTo(view.snp.top)
-            make.height.equalTo(400)
+            make.leading.equalTo(scrollViewContentView.snp.leading)
+            make.trailing.equalTo(scrollViewContentView.snp.trailing)
+            make.top.equalTo(collectionViewTitleLabel).inset(50)
+            make.height.equalTo(200)
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestingCell.identifier, for: indexPath)
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(
-            width: view.frame.width/3-10,
-            height: view.frame.height/5
-        )
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 100
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        print("selected at \(indexPath.section) and row \(indexPath.row)")
+    @objc func didPressAddButton(_ sender: UIButton) {
+        
     }
 }
