@@ -26,6 +26,7 @@
 		A93741BB28EAB4E700AE22E1 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */; };
 		A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BC28EB23E100AE22E1 /* previewExtension.swift */; };
 		A93741C028EB24C800AE22E1 /* AddPlantViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BF28EB24C800AE22E1 /* AddPlantViewControllerUI.swift */; };
+		A93741E428EB359600AE22E1 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741E328EB359600AE22E1 /* WeekDay.swift */; };
 		A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */; };
 		A97A08B928E87C5B00DCA2F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */; };
 		A97A08BB28E87D1700DCA2F0 /* MainViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08BA28E87D1700DCA2F0 /* MainViewControllerUI.swift */; };
@@ -61,6 +62,7 @@
 		A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		A93741BC28EB23E100AE22E1 /* previewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewExtension.swift; sourceTree = "<group>"; };
 		A93741BF28EB24C800AE22E1 /* AddPlantViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewControllerUI.swift; sourceTree = "<group>"; };
+		A93741E328EB359600AE22E1 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A97A08BA28E87D1700DCA2F0 /* MainViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerUI.swift; sourceTree = "<group>"; };
@@ -162,9 +164,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A93741E228EB358A00AE22E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A93741E328EB359600AE22E1 /* WeekDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A97A08B728E87C4800DCA2F0 /* Refactor */ = {
 			isa = PBXGroup;
 			children = (
+				A93741E228EB358A00AE22E1 /* Model */,
 				A9EC184628E918BE00E9E099 /* Cells */,
 				A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */,
 				A93741B828EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift */,
@@ -290,6 +301,7 @@
 				A93741B928EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift in Sources */,
 				A9EC184828E918D300E9E099 /* TestingCell.swift in Sources */,
 				A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */,
+				A93741E428EB359600AE22E1 /* WeekDay.swift in Sources */,
 				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
 				A97A08BB28E87D1700DCA2F0 /* MainViewControllerUI.swift in Sources */,

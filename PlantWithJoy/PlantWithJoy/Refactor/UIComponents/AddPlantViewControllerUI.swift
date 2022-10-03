@@ -34,3 +34,30 @@ let nameTextField: UITextField = {
     textField.placeholder = "Nickname of plant"
     return textField
 }()
+
+let plantSpeciesLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Species"
+    label.font?.withSize(20)
+    return label
+}()
+
+let plantSpeciesTextField: UITextField = {
+    let textField = UITextField()
+    textField.placeholder = "Species of plant"
+    return textField
+}()
+
+let DateOfSeedingLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Date of seeding"
+    label.font?.withSize(20)
+    return label
+}()
+
+let wateringReminder: UILabel = {
+    let label = UILabel()
+    label.text = "Watering reminder"
+    label.font?.withSize(20)
+    return label
+}()

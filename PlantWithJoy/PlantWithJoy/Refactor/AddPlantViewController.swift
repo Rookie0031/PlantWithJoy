@@ -10,31 +10,28 @@ import Foundation
 
 class AddPlantViewController: UIViewController, UITextFieldDelegate {
 
-    let plantSpeciesLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Species"
-        label.font?.withSize(20)
-        return label
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .compact
+        return datePicker
     }()
 
-    let plantSpeciesTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Species of plant"
-        return textField
-    }()
+    let buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
 
-    let DateOfSeedingLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Date of seeding"
-        label.font?.withSize(20)
-        return label
-    }()
+        let dayList = WeekDay.allCases
 
-    let wateringReminder: UILabel = {
-        let label = UILabel()
-        label.text = "Watering reminder"
-        label.font?.withSize(20)
-        return label
+        for element in dayList {
+            let button = UIButton()
+            button.setTitle(element.rawValue, for: .normal)
+            button.tintColor = .systemRed
+            button.backgroundColor = .systemGreen
+            stackView.addArrangedSubview(button)
+        }
+        return stackView
     }()
 
     override func viewDidLoad() {
@@ -59,6 +56,10 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(plantSpeciesTextField)
 
         view.addSubview(DateOfSeedingLabel)
+        view.addSubview(wateringReminder)
+        view.addSubview(datePicker)
+
+        view.addSubview(buttonStackView)
     }
     private func configureUI() {
         addPlantViewTitleLabel.snp.makeConstraints {
@@ -85,18 +86,37 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate {
 
         plantSpeciesLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(50)
-            $0.top.equalTo(plantNameLabel.snp.bottom).inset(-20)
+            $0.top.equalTo(plantNameLabel.snp.bottom).inset(-40)
         }
 
         plantSpeciesTextField.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(50)
-            $0.top.equalTo(nameTextField.snp.bottom).inset(-20)
+            $0.top.equalTo(nameTextField.snp.bottom).inset(-40)
         }
 
         DateOfSeedingLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(50)
-            $0.top.equalTo(plantSpeciesLabel.snp.bottom).inset(-20)
+            $0.top.equalTo(plantSpeciesLabel.snp.bottom).inset(-40)
         }
+
+        datePicker.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(50)
+            $0.centerY.equalTo(DateOfSeedingLabel.snp.centerY)
+            $0.width.equalTo(100)
+        }
+
+        wateringReminder.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(50)
+            $0.top.equalTo(DateOfSeedingLabel.snp.bottom).inset(-40)
+        }
+
+        buttonStackView.snp.makeConstraints {
+            $0.top.equalTo(wateringReminder.snp.bottom).inset(-30)
+            $0.leading.equalToSuperview().inset(30)
+            $0.trailing.equalToSuperview().inset(30)
+            $0.height.equalTo(50)
+        }
+
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
