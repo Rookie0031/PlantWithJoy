@@ -8,7 +8,15 @@ import SnapKit
 import UIKit
 import Foundation
 
-class AddPlantViewController: UIViewController, UITextFieldDelegate {
+class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
+
+    var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .systemGray6
+
+        imageView.layer.cornerRadius = 20
+        return imageView
+    }()
 
     let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -17,33 +25,55 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate {
         return datePicker
     }()
 
-    let buttonStackView: UIStackView = {
+    lazy var dayListButtonArray: [UIButton] = []
+
+    lazy var buttonStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
 
         let dayList = WeekDay.allCases
 
         for element in dayList {
             let button = UIButton()
             button.setTitle(element.rawValue, for: .normal)
-            button.tintColor = .systemRed
+            button.titleLabel?.font = .systemFont(ofSize: 15)
+
+            button.snp.makeConstraints {
+                $0.width.equalTo(20)
+                $0.height.equalTo(10)
+            }
+            button.layer.cornerRadius = 10
             button.backgroundColor = .systemGreen
             stackView.addArrangedSubview(button)
+            self.dayListButtonArray.append(button)
         }
         return stackView
     }()
 
+    let doneButton: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.setTitle("Done", for: .normal)
+        button.layer.cornerRadius = 10
+        return button
+    }()
+
+    // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         addsubViews()
         configureUI()
         setDelegate()
+        let tapGestureRecognzier = UITapGestureRecognizer(target: self, action: #selector(uploadImage(_:)))
+        imageView.addGestureRecognizer(tapGestureRecognzier)
     }
 
     private func setDelegate() {
         nameTextField.delegate = self
         plantSpeciesTextField.delegate = self
+        cameraPicker.delegate = self
     }
 
     private func addsubViews() {
@@ -60,11 +90,12 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(datePicker)
 
         view.addSubview(buttonStackView)
+        view.addSubview(doneButton)
     }
     private func configureUI() {
         addPlantViewTitleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
 
         imageView.snp.makeConstraints {
@@ -117,13 +148,29 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate {
             $0.height.equalTo(50)
         }
 
+        doneButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.equalToSuperview().inset(50)
+        }
+
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
+
+    @objc func uploadImage(_ sender: UITapGestureRecognizer) {
+        print("탭 인식")
+//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+//            present(photoPicker, animated: false)
+//            return
+//        }
+//        print("CameraPicker 작동")
+
+//        present(cameraPicker, animated: false)
+    }
 }
 
 import SwiftUI

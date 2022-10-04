@@ -10,7 +10,11 @@ import Foundation
 
 class MainViewController: UIViewController {
 
-    private let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_:)))
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        return button
+    }()
 
     private let collectionViewTitleLabel: UILabel = {
         let label = UILabel()
@@ -37,7 +41,7 @@ class MainViewController: UIViewController {
 
     private let scrollViewContentView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .clear
+        view.backgroundColor = .white
         return view
     }()
 
@@ -58,12 +62,11 @@ class MainViewController: UIViewController {
 
         addsubView()
         configureUI()
-
-        scrollView.delegate = self
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        setDelegateAndDataSource()
+        addTargetOfFunction()
         navigationItem.titleView = gardenTitleLabel
     }
+
 
     private func addsubView() {
         view.addSubview(scrollView)
@@ -72,6 +75,14 @@ class MainViewController: UIViewController {
 
         scrollView.addSubview(collectionViewTitleLabel)
         scrollView.addSubview(collectionViewSubTitleLabel)
+
+        view.addSubview(addButton)
+    }
+
+    private func setDelegateAndDataSource() {
+        scrollView.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     private func configureUI() {
@@ -89,6 +100,15 @@ class MainViewController: UIViewController {
             $0.top.equalTo(collectionViewTitleLabel.snp.bottom).inset(-5)
             $0.leading.equalToSuperview().inset(10)
         }
+
+        addButton.snp.makeConstraints{
+            $0.trailing.equalToSuperview().inset(15)
+            $0.top.equalTo(collectionViewSubTitleLabel)
+        }
+    }
+
+    private func addTargetOfFunction() {
+        addButton.addTarget(self, action: #selector(didPressAddButton(_:)), for: .touchUpInside)
     }
 
     override func viewDidLayoutSubviews() {
@@ -102,6 +122,16 @@ class MainViewController: UIViewController {
     }
 
     @objc func didPressAddButton(_ sender: UIButton) {
-        
+        present(AddPlantViewController(), animated: true)
+    }
+}
+
+
+import SwiftUI
+struct MainVCPreView:PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            MainViewController().toPreview()
+        }
     }
 }

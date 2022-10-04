@@ -22,6 +22,8 @@
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */; };
+		A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E828EC519000C61E21 /* MyPlantDataModel.swift */; };
 		A93741B928EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741B828EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift */; };
 		A93741BB28EAB4E700AE22E1 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */; };
 		A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BC28EB23E100AE22E1 /* previewExtension.swift */; };
@@ -58,6 +60,8 @@
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewControllerExtension.swift; sourceTree = "<group>"; };
+		A93014E828EC519000C61E21 /* MyPlantDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantDataModel.swift; sourceTree = "<group>"; };
 		A93741B828EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DelageFunctions.swift"; sourceTree = "<group>"; };
 		A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		A93741BC28EB23E100AE22E1 /* previewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewExtension.swift; sourceTree = "<group>"; };
@@ -164,10 +168,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A93014EA28EC540600C61E21 /* ViewControllerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A93741B828EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift */,
+				A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */,
+			);
+			path = ViewControllerExtension;
+			sourceTree = "<group>";
+		};
 		A93741E228EB358A00AE22E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A93741E328EB359600AE22E1 /* WeekDay.swift */,
+				A93014E828EC519000C61E21 /* MyPlantDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,8 +191,8 @@
 			children = (
 				A93741E228EB358A00AE22E1 /* Model */,
 				A9EC184628E918BE00E9E099 /* Cells */,
+				A93014EA28EC540600C61E21 /* ViewControllerExtension */,
 				A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */,
-				A93741B828EAAAA900AE22E1 /* MainViewController+DelageFunctions.swift */,
 				A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */,
 				A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */,
 				A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */,
@@ -286,8 +300,10 @@
 				9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */,
 				A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */,
 				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
+				A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
 				9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */,
+				A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */,
 				9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */,
 				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,

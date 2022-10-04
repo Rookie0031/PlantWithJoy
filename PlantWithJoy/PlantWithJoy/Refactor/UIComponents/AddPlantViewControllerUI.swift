@@ -7,14 +7,6 @@
 import UIKit
 import Foundation
 
-var imageView: UIImageView = {
-    let imageView = UIImageView()
-    imageView.backgroundColor = .systemGray6
-
-    imageView.layer.cornerRadius = 20
-    return imageView
-}()
-
 let addPlantViewTitleLabel: UILabel = {
     let label = UILabel()
     label.text = "My Plant"
