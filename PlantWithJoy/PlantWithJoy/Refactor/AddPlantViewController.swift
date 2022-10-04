@@ -8,14 +8,26 @@ import SnapKit
 import UIKit
 import Foundation
 
-class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
+class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
 
     var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemGray6
-
+        imageView.isUserInteractionEnabled = true
         imageView.layer.cornerRadius = 20
         return imageView
+    }()
+
+    let nameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Nickname of plant"
+        return textField
+    }()
+
+    let plantSpeciesTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Species of plant"
+        return textField
     }()
 
     let datePicker: UIDatePicker = {
@@ -66,8 +78,9 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigatio
         addsubViews()
         configureUI()
         setDelegate()
-        let tapGestureRecognzier = UITapGestureRecognizer(target: self, action: #selector(uploadImage(_:)))
-        imageView.addGestureRecognizer(tapGestureRecognzier)
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(uploadImage(_:))))
+
+        doneButton.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)
     }
 
     private func setDelegate() {
@@ -78,6 +91,8 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigatio
 
     private func addsubViews() {
         view.addSubview(imageView)
+        imageView.addSubview(tapGuideLabel)
+
         view.addSubview(addPlantViewTitleLabel)
         view.addSubview(plantNameLabel)
         view.addSubview(nameTextField)
@@ -92,6 +107,7 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigatio
         view.addSubview(buttonStackView)
         view.addSubview(doneButton)
     }
+    
     private func configureUI() {
         addPlantViewTitleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -103,6 +119,11 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigatio
             $0.top.equalTo(addPlantViewTitleLabel.snp.bottom).inset(-30)
             $0.width.equalTo(200)
             $0.height.equalTo(200)
+        }
+
+        tapGuideLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
         }
 
         plantNameLabel.snp.makeConstraints {
@@ -154,22 +175,6 @@ class AddPlantViewController: UIViewController, UITextFieldDelegate, UINavigatio
             $0.leading.equalToSuperview().inset(50)
         }
 
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-
-    @objc func uploadImage(_ sender: UITapGestureRecognizer) {
-        print("탭 인식")
-//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-//            present(photoPicker, animated: false)
-//            return
-//        }
-//        print("CameraPicker 작동")
-
-//        present(cameraPicker, animated: false)
     }
 }
 

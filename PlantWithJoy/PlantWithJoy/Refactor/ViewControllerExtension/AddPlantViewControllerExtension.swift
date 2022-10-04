@@ -73,8 +73,33 @@ extension AddPlantViewController {
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
             self.imageView.image = image
-            self.imageView.layer.cornerRadius = 50
+            tapGuideLabel.isHidden = true
+            self.imageView.clipsToBounds = true
         }
+    }
+
+    @objc func uploadImage(_ sender: UITapGestureRecognizer) {
+        print("탭 인식")
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            present(cameraPicker, animated: false)
+            return
+        }
+        print("CameraPicker 작동")
+
+        present(photoPicker, animated: false)
+    }
+
+    @objc func didPressDoneButton(_ sender: UIButton) {
+        let newPlant = Myplant(imageData: self.imageView.image?.pngData() ?? Data(), nickName: self.nameTextField.text ?? "", species: plantSpeciesTextField.text ?? "", dateOfSeeding: datePicker.date, wateringDay: [1,2,3])
+        Myplant.sampleData.append(newPlant)
+
+        dismiss(animated: true)
     }
 }
 
+extension AddPlantViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

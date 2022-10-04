@@ -14,6 +14,13 @@ let addPlantViewTitleLabel: UILabel = {
     return label
 }()
 
+let tapGuideLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Plant image"
+    label.font?.withSize(20)
+    return label
+}()
+
 let plantNameLabel: UILabel = {
     let label = UILabel()
     label.text = "NickName"
@@ -21,23 +28,11 @@ let plantNameLabel: UILabel = {
     return label
 }()
 
-let nameTextField: UITextField = {
-    let textField = UITextField()
-    textField.placeholder = "Nickname of plant"
-    return textField
-}()
-
 let plantSpeciesLabel: UILabel = {
     let label = UILabel()
     label.text = "Species"
     label.font?.withSize(20)
     return label
-}()
-
-let plantSpeciesTextField: UITextField = {
-    let textField = UITextField()
-    textField.placeholder = "Species of plant"
-    return textField
 }()
 
 let DateOfSeedingLabel: UILabel = {
