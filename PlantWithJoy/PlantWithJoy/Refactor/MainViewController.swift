@@ -16,21 +16,6 @@ class MainViewController: UIViewController {
         return button
     }()
 
-    private let collectionViewTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "The Growing Plants"
-        label.font.withSize(20)
-        return label
-    }()
-
-    private let collectionViewSubTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Manage your garden"
-        label.textColor = .systemGray3
-        label.font.withSize(14)
-        return label
-    }()
-
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -51,22 +36,32 @@ class MainViewController: UIViewController {
         layout.scrollDirection = .horizontal
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = .systemGray6
         return collectionView
     }()
+
+    lazy var numberOfItems: Int = Myplant.sampleData.count {
+        willSet {
+            collectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.register(TestingCell.self, forCellWithReuseIdentifier: TestingCell.identifier)
+        collectionView.register(MyPlantCell.self, forCellWithReuseIdentifier: MyPlantCell.identifier)
 
         addsubView()
         configureUI()
         setDelegateAndDataSource()
         addTargetOfFunction()
         navigationItem.titleView = gardenTitleLabel
+
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMyPlantCollectionView(_:)), name: NSNotification.Name(rawValue: "ReloadMyPlant"), object: nil)
     }
 
+    @objc func reloadMyPlantCollectionView(_ notification: NSNotification) {
+        collectionView.reloadData()
+    }
 
     private func addsubView() {
         view.addSubview(scrollView)
@@ -117,13 +112,14 @@ class MainViewController: UIViewController {
             make.leading.equalTo(scrollViewContentView.snp.leading)
             make.trailing.equalTo(scrollViewContentView.snp.trailing)
             make.top.equalTo(collectionViewTitleLabel).inset(50)
-            make.height.equalTo(200)
+            make.height.equalTo(250)
         }
     }
 
     @objc func didPressAddButton(_ sender: UIButton) {
         present(AddPlantViewController(), animated: true)
     }
+
 }
 
 

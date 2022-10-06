@@ -5,7 +5,6 @@
 //  Created by Jisu Jang on 2022/10/03.
 //
 import UIKit
-import Foundation
 
 let addPlantViewTitleLabel: UILabel = {
     let label = UILabel()

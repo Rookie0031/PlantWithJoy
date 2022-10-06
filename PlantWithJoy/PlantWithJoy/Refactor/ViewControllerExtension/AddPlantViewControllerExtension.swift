@@ -68,7 +68,7 @@ extension AddPlantViewController: PHPickerViewControllerDelegate {
     }
 }
 
-// image functions
+// operating functions
 extension AddPlantViewController {
     func updateImage(_ image: UIImage) {
         DispatchQueue.main.async {
@@ -92,8 +92,12 @@ extension AddPlantViewController {
     @objc func didPressDoneButton(_ sender: UIButton) {
         let newPlant = Myplant(imageData: self.imageView.image?.pngData() ?? Data(), nickName: self.nameTextField.text ?? "", species: plantSpeciesTextField.text ?? "", dateOfSeeding: datePicker.date, wateringDay: [1,2,3])
         Myplant.sampleData.append(newPlant)
+        print(Myplant.sampleData.count)
 
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ReloadMyPlant"), object: nil)
         dismiss(animated: true)
+
+
     }
 }
 

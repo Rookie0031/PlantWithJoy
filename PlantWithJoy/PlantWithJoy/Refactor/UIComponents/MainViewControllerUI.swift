@@ -7,6 +7,21 @@
 import UIKit
 import Foundation
 
+let collectionViewTitleLabel: UILabel = {
+    let label = UILabel()
+    label.text = "The Growing Plants"
+    label.font = .systemFont(ofSize: 20, weight: .medium)
+    return label
+}()
+
+let collectionViewSubTitleLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Manage your garden"
+    label.textColor = .systemGray3
+    label.font.withSize(14)
+    return label
+}()
+
 let gardenTitleLabel: UILabel = {
     var label = UILabel()
     label.text = "GARDEN"

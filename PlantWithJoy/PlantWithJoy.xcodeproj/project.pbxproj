@@ -22,6 +22,8 @@
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A90AFF8628EF01F1008BC229 /* MyPlantCellStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90AFF8528EF01F1008BC229 /* MyPlantCellStoryBoard.swift */; };
+		A90AFF8C28EF1298008BC229 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90AFF8B28EF1298008BC229 /* DateFormatter.swift */; };
 		A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */; };
 		A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E828EC519000C61E21 /* MyPlantDataModel.swift */; };
 		A93741B928EAAAA900AE22E1 /* MainViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741B828EAAAA900AE22E1 /* MainViewControllerExtension.swift */; };
@@ -37,7 +39,7 @@
 		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
 		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
 		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
-		A9EC184828E918D300E9E099 /* TestingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC184728E918D300E9E099 /* TestingCell.swift */; };
+		A9EC184828E918D300E9E099 /* MyPlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC184728E918D300E9E099 /* MyPlantCell.swift */; };
 		A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9EC184A28E92C5B00E9E099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A90AFF8528EF01F1008BC229 /* MyPlantCellStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantCellStoryBoard.swift; sourceTree = "<group>"; };
+		A90AFF8B28EF1298008BC229 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewControllerExtension.swift; sourceTree = "<group>"; };
 		A93014E828EC519000C61E21 /* MyPlantDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantDataModel.swift; sourceTree = "<group>"; };
 		A93741B828EAAAA900AE22E1 /* MainViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
 		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
 		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
-		A9EC184728E918D300E9E099 /* TestingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCell.swift; sourceTree = "<group>"; };
+		A9EC184728E918D300E9E099 /* MyPlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			children = (
 				A93741E328EB359600AE22E1 /* WeekDay.swift */,
 				A93014E828EC519000C61E21 /* MyPlantDataModel.swift */,
+				A90AFF8B28EF1298008BC229 /* DateFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,7 +218,8 @@
 		A9EC184628E918BE00E9E099 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A9EC184728E918D300E9E099 /* TestingCell.swift */,
+				A9EC184728E918D300E9E099 /* MyPlantCell.swift */,
+				A90AFF8528EF01F1008BC229 /* MyPlantCellStoryBoard.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -315,11 +321,13 @@
 				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
 				A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */,
 				A93741B928EAAAA900AE22E1 /* MainViewControllerExtension.swift in Sources */,
-				A9EC184828E918D300E9E099 /* TestingCell.swift in Sources */,
+				A90AFF8628EF01F1008BC229 /* MyPlantCellStoryBoard.swift in Sources */,
+				A9EC184828E918D300E9E099 /* MyPlantCell.swift in Sources */,
 				A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */,
 				A93741E428EB359600AE22E1 /* WeekDay.swift in Sources */,
 				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
+				A90AFF8C28EF1298008BC229 /* DateFormatter.swift in Sources */,
 				A97A08BB28E87D1700DCA2F0 /* MainViewControllerUI.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
 				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,
