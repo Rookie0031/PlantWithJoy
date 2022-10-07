@@ -48,9 +48,10 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
         let dayList = WeekDay.allCases
 
         for element in dayList {
-            let button = UIButton()
+            let button = dayButton()
             button.setTitle(element.rawValue, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 15)
+            button.addTarget(self, action: #selector(addWateringDay(_:)), for: .touchUpInside)
 
             button.snp.makeConstraints {
                 $0.width.equalTo(20)
@@ -63,6 +64,8 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
         }
         return stackView
     }()
+
+    var wateringDayList: Set<Int> = []
 
     let doneButton: UIButton = {
         let button = UIButton(configuration: .filled())
@@ -81,6 +84,37 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(uploadImage(_:))))
 
         doneButton.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)
+    }
+
+    @objc func addWateringDay(_ sender: dayButton) {
+
+        if sender.isTapped == false {
+            sender.backgroundColor = .systemBlue
+            switch sender.titleLabel?.text {
+            case WeekDay.sun.rawValue: wateringDayList.insert(1)
+            case WeekDay.mon.rawValue: wateringDayList.insert(2)
+            case WeekDay.tue.rawValue: wateringDayList.insert(3)
+            case WeekDay.wed.rawValue: wateringDayList.insert(4)
+            case WeekDay.thur.rawValue: wateringDayList.insert(5)
+            case WeekDay.fri.rawValue: wateringDayList.insert(6)
+            case WeekDay.sat.rawValue: wateringDayList.insert(7)
+            default : wateringDayList.insert(0)
+            }
+            sender.isTapped.toggle()
+
+        } else {
+            sender.backgroundColor = .systemGreen
+            switch sender.titleLabel?.text {
+            case WeekDay.sun.rawValue: wateringDayList.remove(1)
+            case WeekDay.mon.rawValue: wateringDayList.remove(2)
+            case WeekDay.tue.rawValue: wateringDayList.remove(3)
+            case WeekDay.wed.rawValue: wateringDayList.remove(4)
+            case WeekDay.thur.rawValue: wateringDayList.remove(5)
+            case WeekDay.fri.rawValue: wateringDayList.remove(6)
+            case WeekDay.sat.rawValue: wateringDayList.remove(7)
+            default : wateringDayList.insert(0)
+            }
+        }
     }
 
     private func setDelegate() {

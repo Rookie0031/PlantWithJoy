@@ -6,15 +6,11 @@
 //
 import UIKit
 import SnapKit
+import Then
 import Foundation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    private let addButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
-        return button
-    }()
 
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -39,10 +35,9 @@ class MainViewController: UIViewController {
         return collectionView
     }()
 
-    lazy var numberOfItems: Int = Myplant.sampleData.count {
-        willSet {
-            collectionView.reloadData()
-        }
+    private let tableView: UITableView = UITableView().then {
+        $0.layer.cornerRadius = 10
+        $0.register(ReminderCell.self, forCellReuseIdentifier: ReminderCell.identifier)
     }
 
     override func viewDidLoad() {
@@ -64,20 +59,30 @@ class MainViewController: UIViewController {
     }
 
     private func addsubView() {
+        // scroll
         view.addSubview(scrollView)
         scrollView.addSubview(scrollViewContentView)
+
+        // collection
         scrollViewContentView.addSubview(collectionView)
+        scrollViewContentView.addSubview(collectionViewTitleLabel)
+        scrollViewContentView.addSubview(collectionViewSubTitleLabel)
+        scrollViewContentView.addSubview(addButton)
 
-        scrollView.addSubview(collectionViewTitleLabel)
-        scrollView.addSubview(collectionViewSubTitleLabel)
+        // table
+        scrollViewContentView.addSubview(tableViewTitleLabel)
+        scrollViewContentView.addSubview(tableViewSubTitleLabel)
 
-        view.addSubview(addButton)
+        scrollViewContentView.addSubview(tableView)
     }
 
     private func setDelegateAndDataSource() {
         scrollView.delegate = self
         collectionView.delegate = self
+        tableView.delegate = self
+
         collectionView.dataSource = self
+        tableView.dataSource = self
     }
 
     private func configureUI() {
@@ -100,6 +105,24 @@ class MainViewController: UIViewController {
             $0.trailing.equalToSuperview().inset(15)
             $0.top.equalTo(collectionViewSubTitleLabel)
         }
+
+        tableViewTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+            $0.top.equalTo(collectionView.snp.bottom).offset(20)
+        }
+
+        tableViewSubTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+            $0.top.equalTo(tableViewTitleLabel.snp.bottom).offset(5)
+        }
+
+        tableView.snp.makeConstraints {
+            $0.leading.equalTo(collectionView.snp.leading).inset(10)
+            $0.trailing.equalTo(collectionView.snp.trailing).inset(10)
+            $0.top.equalTo(tableViewSubTitleLabel.snp.bottom).offset(10)
+            $0.height.equalTo(200)
+        }
+
     }
 
     private func addTargetOfFunction() {
@@ -120,7 +143,26 @@ class MainViewController: UIViewController {
         present(AddPlantViewController(), animated: true)
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReminderCell.identifier, for: indexPath) as! ReminderCell
+
+        let calendar = Calendar(identifier: .gregorian)
+        let weekDayofToday = calendar.component(.weekday, from: Date())
+
+        if Myplant.sampleData[indexPath.row].wateringDay.contains(weekDayofToday) {
+            cell.setupCellData(Myplant.sampleData[indexPath.row])
+        }
+//        if Myplant.sampleData[indexPath.row].wateringDay
+        return cell
+
+        // 만약 sampleData indexpath.row의 date가 item의 day 안의 element로 있다면 함수를 수행할 것 .
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Myplant.sampleData.count
+    }
 }
+
 
 
 import SwiftUI

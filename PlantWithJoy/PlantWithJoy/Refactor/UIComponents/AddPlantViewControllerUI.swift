@@ -43,7 +43,7 @@ let DateOfSeedingLabel: UILabel = {
 
 let wateringReminder: UILabel = {
     let label = UILabel()
-    label.text = "Watering reminder"
+    label.text = "Watering day"
     label.font?.withSize(20)
     return label
 }()
