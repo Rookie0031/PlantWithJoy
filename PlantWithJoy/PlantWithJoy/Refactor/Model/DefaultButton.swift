@@ -6,6 +6,6 @@
 //
 import UIKit
 
-class dayButton: UIButton {
+class DefaultButton: UIButton {
     var isTapped: Bool = false
 }

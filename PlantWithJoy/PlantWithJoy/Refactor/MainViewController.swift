@@ -38,6 +38,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     private let tableView: UITableView = UITableView().then {
         $0.layer.cornerRadius = 10
         $0.register(ReminderCell.self, forCellReuseIdentifier: ReminderCell.identifier)
+        $0.tableFooterView = UIView(frame: .zero)
     }
 
     override func viewDidLoad() {
@@ -51,11 +52,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         addTargetOfFunction()
         navigationItem.titleView = gardenTitleLabel
 
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadMyPlantCollectionView(_:)), name: NSNotification.Name(rawValue: "ReloadMyPlant"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMainViewData(_:)), name: NSNotification.Name(rawValue: "ReloadMyPlant"), object: nil)
+        tableView.separatorColor = .clear
     }
 
-    @objc func reloadMyPlantCollectionView(_ notification: NSNotification) {
+    @objc func reloadMainViewData(_ notification: NSNotification) {
         collectionView.reloadData()
+        tableView.reloadData()
     }
 
     private func addsubView() {
@@ -145,21 +148,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReminderCell.identifier, for: indexPath) as! ReminderCell
-
-        let calendar = Calendar(identifier: .gregorian)
-        let weekDayofToday = calendar.component(.weekday, from: Date())
-
-        if Myplant.sampleData[indexPath.row].wateringDay.contains(weekDayofToday) {
-            cell.setupCellData(Myplant.sampleData[indexPath.row])
-        }
-//        if Myplant.sampleData[indexPath.row].wateringDay
+        let filteredList = Myplant.sampleData.filter({$0.wateringDay.contains(weekDayOfToday)})
+        cell.setupCellData(filteredList[indexPath.row])
         return cell
-
-        // 만약 sampleData indexpath.row의 date가 item의 day 안의 element로 있다면 함수를 수행할 것 .
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Myplant.sampleData.count
+        return Myplant.sampleData.filter({$0.wateringDay.contains(weekDayOfToday)}).count
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 

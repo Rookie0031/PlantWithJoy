@@ -18,19 +18,33 @@ class ReminderCell: UITableViewCell {
         return label
     }()
 
-    let reminderCheckButton = UIButton().then {
-        $0.setImage(UIImage(systemName: "circle"), for: .normal)
+    let symbolConfiguration = UIImage.SymbolConfiguration(textStyle: .title1)
+
+    lazy var reminderCheckButton = DefaultButton().then {
+        let image = UIImage(systemName: "drop", withConfiguration: symbolConfiguration)
+        $0.setImage(image, for: .normal)
     }
 
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemGray6
+        contentView.layer.cornerRadius = 15
         addsubviews()
+        reminderCheckButton.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc func didPressDoneButton(_ sender: DefaultButton) {
+        sender.isTapped.toggle()
+        if sender.isTapped {
+            sender.setImage(UIImage(systemName: "drop.fill", withConfiguration: symbolConfiguration), for: .normal)
+        } else {
+            sender.setImage(UIImage(systemName: "drop", withConfiguration: symbolConfiguration), for: .normal)
+        }
     }
 
     func addsubviews() {
@@ -40,6 +54,7 @@ class ReminderCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 12, right: 0))
         reminderCheckButton.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(20)
             $0.centerY.equalToSuperview()

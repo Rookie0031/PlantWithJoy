@@ -48,7 +48,7 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
         let dayList = WeekDay.allCases
 
         for element in dayList {
-            let button = dayButton()
+            let button = DefaultButton()
             button.setTitle(element.rawValue, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 15)
             button.addTarget(self, action: #selector(addWateringDay(_:)), for: .touchUpInside)
@@ -86,7 +86,7 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
         doneButton.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)
     }
 
-    @objc func addWateringDay(_ sender: dayButton) {
+    @objc func addWateringDay(_ sender: DefaultButton) {
 
         if sender.isTapped == false {
             sender.backgroundColor = .systemBlue

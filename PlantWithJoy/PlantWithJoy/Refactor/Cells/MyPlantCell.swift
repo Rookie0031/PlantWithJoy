@@ -14,7 +14,7 @@ class MyPlantCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 10
-        imageView.layer.borderColor = UIColor.systemBlue.cgColor
+        imageView.layer.borderColor = UIColor.white.cgColor
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -59,7 +59,6 @@ class MyPlantCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         imageView.snp.makeConstraints {
-//            $0.edges.equalToSuperview()
             $0.leading.equalToSuperview().inset(15)
             $0.centerY.equalToSuperview()
             $0.height.equalTo(75)
