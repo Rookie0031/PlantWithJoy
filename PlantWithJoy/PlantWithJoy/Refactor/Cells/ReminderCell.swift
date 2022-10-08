@@ -11,6 +11,8 @@ import UIKit
 class ReminderCell: UITableViewCell {
     static let identifier = "ReminderCell"
 
+    var id: String = ""
+
     let reminderPlantName: UILabel = {
         let label = UILabel()
         label.text = ""

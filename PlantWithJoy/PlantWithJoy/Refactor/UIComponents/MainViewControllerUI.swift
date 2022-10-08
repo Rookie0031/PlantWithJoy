@@ -49,3 +49,18 @@ let tableViewSubTitleLabel: UILabel = {
     label.font.withSize(14)
     return label
 }()
+
+let discoveryTitleLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Discovery"
+    label.font = .systemFont(ofSize: 20, weight: .medium)
+    return label
+}()
+
+let discoverySubTitleLabel: UILabel = {
+    let label = UILabel()
+    label.text = "articles for your plants"
+    label.textColor = .systemGray3
+    label.font.withSize(14)
+    return label
+}()

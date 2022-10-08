@@ -90,7 +90,7 @@ extension AddPlantViewController {
     }
 
     @objc func didPressDoneButton(_ sender: UIButton) {
-        let newPlant = Myplant(imageData: self.imageView.image?.pngData() ?? Data(), nickName: self.nameTextField.text ?? "", species: plantSpeciesTextField.text ?? "", dateOfSeeding: datePicker.date, wateringDay: wateringDayList)
+        let newPlant = Myplant(id: UUID().uuidString, imageData: self.imageView.image?.pngData() ?? Data(), nickName: self.nameTextField.text ?? "", species: plantSpeciesTextField.text ?? "", dateOfSeeding: datePicker.date, wateringDay: wateringDayList)
         Myplant.sampleData.append(newPlant)
         print(Myplant.sampleData.count)
         print(wateringDayList)

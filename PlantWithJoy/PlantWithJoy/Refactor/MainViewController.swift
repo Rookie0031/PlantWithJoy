@@ -75,8 +75,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // table
         scrollViewContentView.addSubview(tableViewTitleLabel)
         scrollViewContentView.addSubview(tableViewSubTitleLabel)
-
         scrollViewContentView.addSubview(tableView)
+
+        // discovery
+        scrollViewContentView.addSubview(discoveryTitleLabel)
+        scrollViewContentView.addSubview(discoverySubTitleLabel)
     }
 
     private func setDelegateAndDataSource() {
@@ -126,6 +129,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             $0.height.equalTo(200)
         }
 
+        discoveryTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+            $0.top.equalTo(tableView.snp.bottom).offset(20)
+        }
+
+        discoverySubTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+            $0.top.equalTo(discoveryTitleLabel.snp.bottom).offset(5)
+        }
+
     }
 
     private func addTargetOfFunction() {
@@ -150,6 +163,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: ReminderCell.identifier, for: indexPath) as! ReminderCell
         let filteredList = Myplant.sampleData.filter({$0.wateringDay.contains(weekDayOfToday)})
         cell.setupCellData(filteredList[indexPath.row])
+        cell.selectedBackgroundView = UIView(frame: .zero)
         return cell
     }
 

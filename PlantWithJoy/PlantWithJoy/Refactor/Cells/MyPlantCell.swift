@@ -10,6 +10,8 @@ import UIKit
 class MyPlantCell: UICollectionViewCell {
     static let identifier = "TestingCell"
 
+    var id: String = ""
+
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.borderWidth = 1
@@ -94,5 +96,6 @@ class MyPlantCell: UICollectionViewCell {
         speciesLabel.text = item.species
         dateOfSeedingLabel.text = item.dateOfSeeding.dayText
         imageView.layoutIfNeeded()
+        self.id = item.id
     }
 }

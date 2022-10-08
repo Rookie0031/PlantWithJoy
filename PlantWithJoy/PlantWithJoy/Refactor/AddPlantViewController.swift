@@ -87,8 +87,9 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     @objc func addWateringDay(_ sender: DefaultButton) {
+        sender.isTapped.toggle()
 
-        if sender.isTapped == false {
+        if sender.isTapped == true {
             sender.backgroundColor = .systemBlue
             switch sender.titleLabel?.text {
             case WeekDay.sun.rawValue: wateringDayList.insert(1)
@@ -100,7 +101,6 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
             case WeekDay.sat.rawValue: wateringDayList.insert(7)
             default : wateringDayList.insert(0)
             }
-            sender.isTapped.toggle()
 
         } else {
             sender.backgroundColor = .systemGreen
