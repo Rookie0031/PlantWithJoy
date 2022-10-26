@@ -19,8 +19,8 @@ struct Myplant: Identifiable {
 #if DEBUG
 extension Myplant {
     static var sampleData = [
-        Myplant(id: UUID().uuidString, imageData: UIImage(named: "TestPlant")?.pngData() ?? Data(), nickName: "Dino", species: "dinosaurs", dateOfSeeding: Date(), wateringDay: [1,2,3]),
-        Myplant(id: UUID().uuidString, imageData: UIImage(named: "LogInPicture")?.pngData() ?? Data(), nickName: "Niniz", species: "Big leaf", dateOfSeeding: Date(), wateringDay: [3,4,5]),
+        Myplant(id: UUID().uuidString, imageData: UIImage(named: "TestPlant")?.pngData() ?? Data(), nickName: "Hello!", species: "your plant", dateOfSeeding: Date(), wateringDay: [1,2,3,4,5,6,7]),
+        Myplant(id: UUID().uuidString, imageData: UIImage(named: "LogInPicture")?.pngData() ?? Data(), nickName: "Daisy", species: "Big leaf", dateOfSeeding: Date(), wateringDay: [3,4,5]),
         Myplant(id: UUID().uuidString, imageData: UIImage(named: "TestPlant")?.pngData() ?? Data(), nickName: "Cling", species: "Sharp root", dateOfSeeding: Date(), wateringDay: [5,6,7])
     ]
 }

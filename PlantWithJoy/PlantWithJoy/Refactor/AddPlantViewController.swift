@@ -69,7 +69,7 @@ class AddPlantViewController: UIViewController, UINavigationControllerDelegate {
 
     let doneButton: UIButton = {
         let button = UIButton(configuration: .filled())
-        button.setTitle("Done", for: .normal)
+        button.setTitle("Save", for: .normal)
         button.layer.cornerRadius = 10
         return button
     }()

@@ -44,7 +44,7 @@ let tableViewTitleLabel: UILabel = {
 
 let tableViewSubTitleLabel: UILabel = {
     let label = UILabel()
-    label.text = "check your watering plan"
+    label.text = "Tap droplet, check your watering"
     label.textColor = .systemGray3
     label.font.withSize(14)
     return label

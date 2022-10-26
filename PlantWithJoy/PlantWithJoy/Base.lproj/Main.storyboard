@@ -215,20 +215,76 @@
             </objects>
             <point key="canvasLocation" x="3489" y="-478"/>
         </scene>
-        <!--Add Plant View Controller-->
+        <!--Diary View Controller-->
         <scene sceneID="V8z-xu-kdj">
             <objects>
-                <viewController id="Q9o-Ac-3sh" customClass="AddPlantViewController" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q9o-Ac-3sh" customClass="DiaryViewController" customModule="PlantWithJoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ms-NA-lB9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-S9-Evv">
+                                <rect key="frame" x="99" y="322.33333333333331" width="150" height="34.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="kTK-L4-XKt"/>
+                                </constraints>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGE-6l-K74">
+                                <rect key="frame" x="53" y="329" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Record your plant's growth" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-SL-Q7E">
+                                <rect key="frame" x="45" y="387" width="300" height="215"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="hus-fH-USK"/>
+                                    <constraint firstAttribute="width" constant="300" id="oq5-vy-qlJ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ8-5F-hpT">
+                                <rect key="frame" x="20" y="755" width="350" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mVa-WA-XES">
+                                <rect key="frame" x="95" y="77" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cwP-VR-gKG"/>
+                                    <constraint firstAttribute="width" constant="200" id="ihL-Mp-WSW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lRW-7w-35t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mVa-WA-XES" firstAttribute="centerX" secondItem="4Ms-NA-lB9" secondAttribute="centerX" id="89q-gg-pjQ"/>
+                            <constraint firstItem="lRW-7w-35t" firstAttribute="trailing" secondItem="QJ8-5F-hpT" secondAttribute="trailing" constant="20" id="AFd-tL-2th"/>
+                            <constraint firstItem="lRW-7w-35t" firstAttribute="bottom" secondItem="QJ8-5F-hpT" secondAttribute="bottom" constant="20" id="ESZ-tc-D3I"/>
+                            <constraint firstItem="uXD-S9-Evv" firstAttribute="centerY" secondItem="DGE-6l-K74" secondAttribute="centerY" id="N24-2Q-1iG"/>
+                            <constraint firstItem="mVa-WA-XES" firstAttribute="top" secondItem="lRW-7w-35t" secondAttribute="top" constant="30" id="Wvy-CV-5Ah"/>
+                            <constraint firstItem="QJ8-5F-hpT" firstAttribute="leading" secondItem="lRW-7w-35t" secondAttribute="leading" constant="20" id="kBW-6y-zQX"/>
+                            <constraint firstItem="Wgs-SL-Q7E" firstAttribute="top" secondItem="uXD-S9-Evv" secondAttribute="bottom" constant="30.333333333333371" id="mpi-V3-HCy"/>
+                            <constraint firstItem="Wgs-SL-Q7E" firstAttribute="centerX" secondItem="4Ms-NA-lB9" secondAttribute="centerX" id="pgm-7Q-vwW"/>
+                            <constraint firstItem="DGE-6l-K74" firstAttribute="leading" secondItem="lRW-7w-35t" secondAttribute="leading" constant="53" id="pz2-0A-YpS"/>
+                            <constraint firstItem="uXD-S9-Evv" firstAttribute="leading" secondItem="DGE-6l-K74" secondAttribute="trailing" constant="10" id="stb-MT-flr"/>
+                            <constraint firstItem="DGE-6l-K74" firstAttribute="top" secondItem="mVa-WA-XES" secondAttribute="bottom" constant="52" id="zj7-ln-S8f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="DGE-6l-K74" id="cUU-mH-dMK"/>
+                        <outlet property="datePicker" destination="uXD-S9-Evv" id="P5E-Wl-rOY"/>
+                        <outlet property="imageView" destination="mVa-WA-XES" id="aNf-dq-5ep"/>
+                        <outlet property="textView" destination="Wgs-SL-Q7E" id="d5Q-lK-qdP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii3-sz-Ohc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6928" y="-735"/>
+            <point key="canvasLocation" x="4267.6923076923076" y="236.72985781990519"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YE6-qy-W7c">

@@ -11,8 +11,9 @@ class MyPlantCell: UICollectionViewCell {
     static let identifier = "TestingCell"
 
     var id: String = ""
+    var contentviewWidth: CGFloat = 0
 
-    private let imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 10
@@ -21,18 +22,18 @@ class MyPlantCell: UICollectionViewCell {
         return imageView
     }()
 
-    private let nameLabel: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel()
         label.text = ""
         label.font = .systemFont(ofSize: 16)
         return label
     }()
 
-    private let speciesLabel: UILabel = {
+    let speciesLabel: UILabel = {
         let label = UILabel()
         label.text = ""
         label.font = .systemFont(ofSize: 14)
-        label.textColor = .systemGreen
+        label.textColor = .systemGray
         return label
     }()
 
@@ -40,7 +41,7 @@ class MyPlantCell: UICollectionViewCell {
         let label = UILabel()
         label.text = ""
         label.font = .systemFont(ofSize: 14)
-        label.textColor = .systemGreen
+        label.textColor = .systemGray
         return label
     }()
 
@@ -97,5 +98,21 @@ class MyPlantCell: UICollectionViewCell {
         dateOfSeedingLabel.text = item.dateOfSeeding.dayText
         imageView.layoutIfNeeded()
         self.id = item.id
+
+        let contentviewWidthFirst = imageView.frame.width + nameLabel.frame.width
+        let contentviewWidthSecond = imageView.frame.width + speciesLabel.frame.width
+        contentviewWidth = max(contentviewWidthFirst, contentviewWidthSecond) + 20
+        print(contentviewWidth)
+    }
+
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        super.preferredLayoutAttributesFitting(layoutAttributes)
+        layoutIfNeeded()
+
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.width = ceil(size.height)
+        layoutAttributes.frame = frame
+        return layoutAttributes
     }
 }

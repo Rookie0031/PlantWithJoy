@@ -11,7 +11,6 @@ import Foundation
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +30,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView.showsHorizontalScrollIndicator = false
+        layout.estimatedItemSize = .zero
         collectionView.collectionViewLayout = layout
+
         return collectionView
     }()
 
@@ -45,7 +46,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         collectionView.register(MyPlantCell.self, forCellWithReuseIdentifier: MyPlantCell.identifier)
-
         addsubView()
         configureUI()
         setDelegateAndDataSource()
@@ -77,7 +77,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         scrollViewContentView.addSubview(tableViewSubTitleLabel)
         scrollViewContentView.addSubview(tableView)
 
-        // discovery
+//        // discovery
         scrollViewContentView.addSubview(discoveryTitleLabel)
         scrollViewContentView.addSubview(discoverySubTitleLabel)
     }
@@ -129,15 +129,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             $0.height.equalTo(200)
         }
 
-        discoveryTitleLabel.snp.makeConstraints {
-            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
-            $0.top.equalTo(tableView.snp.bottom).offset(20)
-        }
-
-        discoverySubTitleLabel.snp.makeConstraints {
-            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
-            $0.top.equalTo(discoveryTitleLabel.snp.bottom).offset(5)
-        }
+        // MARK: 추후 라벨
+//        discoveryTitleLabel.snp.makeConstraints {
+//            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+//            $0.top.equalTo(tableView.snp.bottom).offset(20)
+//        }
+//
+//        discoverySubTitleLabel.snp.makeConstraints {
+//            $0.leading.equalTo(collectionViewTitleLabel.snp.leading)
+//            $0.top.equalTo(discoveryTitleLabel.snp.bottom).offset(5)
+//        }
 
     }
 
