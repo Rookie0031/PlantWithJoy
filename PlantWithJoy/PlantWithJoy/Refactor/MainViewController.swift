@@ -42,6 +42,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         $0.tableFooterView = UIView(frame: .zero)
     }
 
+    private let textView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .white
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
