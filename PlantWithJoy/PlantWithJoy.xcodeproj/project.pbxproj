@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BAB209D2910EB30000473B0 /* dduuududududuuddudu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */; };
 		9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A728A1D294005441DD /* AppDelegate.swift */; };
 		9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A928A1D294005441DD /* SceneDelegate.swift */; };
 		9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102AB28A1D294005441DD /* GardenViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dduuududududuuddudu.swift; sourceTree = "<group>"; };
 		9A7102A428A1D294005441DD /* PlantWithJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantWithJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7102A728A1D294005441DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7102A928A1D294005441DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				9A7102B228A1D295005441DD /* LaunchScreen.storyboard */,
 				9A7102B528A1D295005441DD /* Info.plist */,
 				A93741BC28EB23E100AE22E1 /* previewExtension.swift */,
+				7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */,
 			);
 			path = PlantWithJoy;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */,
 				9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */,
 				A92A48B128F0223F00A18A90 /* Calendar+Date.swift in Sources */,
+				7BAB209D2910EB30000473B0 /* dduuududududuuddudu.swift in Sources */,
 				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				A97A1F8528F1982300BBB7CD /* DiaryViewController.swift in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
