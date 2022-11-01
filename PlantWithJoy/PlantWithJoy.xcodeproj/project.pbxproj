@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BAB209D2910EB30000473B0 /* dduuududududuuddudu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */; };
+		7BAB209F2910EFBF000473B0 /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB209E2910EFBF000473B0 /* test2.swift */; };
 		9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A728A1D294005441DD /* AppDelegate.swift */; };
 		9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102A928A1D294005441DD /* SceneDelegate.swift */; };
 		9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7102AB28A1D294005441DD /* GardenViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dduuududududuuddudu.swift; sourceTree = "<group>"; };
+		7BAB209E2910EFBF000473B0 /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 		9A7102A428A1D294005441DD /* PlantWithJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantWithJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7102A728A1D294005441DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7102A928A1D294005441DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				9A7102B528A1D295005441DD /* Info.plist */,
 				A93741BC28EB23E100AE22E1 /* previewExtension.swift */,
 				7BAB209C2910EB30000473B0 /* dduuududududuuddudu.swift */,
+				7BAB209E2910EFBF000473B0 /* test2.swift */,
 			);
 			path = PlantWithJoy;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */,
 				A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */,
+				7BAB209F2910EFBF000473B0 /* test2.swift in Sources */,
 				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
 				A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
