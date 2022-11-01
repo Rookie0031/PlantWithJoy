@@ -22,10 +22,30 @@
 		9AAAC48128BE2A3400291C2C /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47C28BE2A3400291C2C /* NOTICE.txt */; };
 		9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAAC47E28BE2A3400291C2C /* LICENSE.txt */; };
 		9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */; };
+		A90AFF8C28EF1298008BC229 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90AFF8B28EF1298008BC229 /* DateFormatter.swift */; };
+		A90F8D772908DC2800E2478C /* StoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90F8D762908DC2800E2478C /* StoryBoard.storyboard */; };
+		A92A48AB28EF977000A18A90 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A92A48AA28EF977000A18A90 /* Then */; };
+		A92A48AD28EFF8DE00A18A90 /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A48AC28EFF8DE00A18A90 /* ReminderCell.swift */; };
+		A92A48AF28F01C5600A18A90 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A48AE28F01C5600A18A90 /* DefaultButton.swift */; };
+		A92A48B128F0223F00A18A90 /* Calendar+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A48B028F0223F00A18A90 /* Calendar+Date.swift */; };
+		A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */; };
+		A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93014E828EC519000C61E21 /* MyPlantDataModel.swift */; };
+		A93741B928EAAAA900AE22E1 /* MainViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741B828EAAAA900AE22E1 /* MainViewControllerExtension.swift */; };
+		A93741BB28EAB4E700AE22E1 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */; };
+		A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BC28EB23E100AE22E1 /* previewExtension.swift */; };
+		A93741C028EB24C800AE22E1 /* AddPlantViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741BF28EB24C800AE22E1 /* AddPlantViewControllerUI.swift */; };
+		A93741E428EB359600AE22E1 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741E328EB359600AE22E1 /* WeekDay.swift */; };
+		A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */; };
+		A97A08B928E87C5B00DCA2F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */; };
+		A97A08BB28E87D1700DCA2F0 /* MainViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08BA28E87D1700DCA2F0 /* MainViewControllerUI.swift */; };
+		A97A08BE28E8806700DCA2F0 /* MainViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */; };
+		A97A1F8528F1982300BBB7CD /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A1F8428F1982300BBB7CD /* DiaryViewController.swift */; };
 		A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8D2A728C037EE00DD2709 /* TextExtension.swift */; };
 		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
 		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
 		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
+		A9EC184828E918D300E9E099 /* MyPlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC184728E918D300E9E099 /* MyPlantCell.swift */; };
+		A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9EC184A28E92C5B00E9E099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +67,28 @@
 		9AAAC47E28BE2A3400291C2C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AAAC48A28BE320F00291C2C /* PlantManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManagementViewController.swift; sourceTree = "<group>"; };
 		9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantWithJoy.entitlements; sourceTree = "<group>"; };
+		A90AFF8B28EF1298008BC229 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		A90F8D762908DC2800E2478C /* StoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryBoard.storyboard; sourceTree = "<group>"; };
+		A92A48AC28EFF8DE00A18A90 /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		A92A48AE28F01C5600A18A90 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		A92A48B028F0223F00A18A90 /* Calendar+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Date.swift"; sourceTree = "<group>"; };
+		A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewControllerExtension.swift; sourceTree = "<group>"; };
+		A93014E828EC519000C61E21 /* MyPlantDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantDataModel.swift; sourceTree = "<group>"; };
+		A93741B828EAAAA900AE22E1 /* MainViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExtension.swift; sourceTree = "<group>"; };
+		A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
+		A93741BC28EB23E100AE22E1 /* previewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewExtension.swift; sourceTree = "<group>"; };
+		A93741BF28EB24C800AE22E1 /* AddPlantViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewControllerUI.swift; sourceTree = "<group>"; };
+		A93741E328EB359600AE22E1 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
+		A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A97A08BA28E87D1700DCA2F0 /* MainViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerUI.swift; sourceTree = "<group>"; };
+		A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DataSource.swift"; sourceTree = "<group>"; };
+		A97A1F8428F1982300BBB7CD /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		A9A8D2A728C037EE00DD2709 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
 		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
 		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
+		A9EC184728E918D300E9E099 /* MyPlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */,
+				A92A48AB28EF977000A18A90 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +123,7 @@
 		9A7102A628A1D294005441DD /* PlantWithJoy */ = {
 			isa = PBXGroup;
 			children = (
+				A97A08B728E87C4800DCA2F0 /* Refactor */,
 				9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */,
 				9A7102A728A1D294005441DD /* AppDelegate.swift */,
 				9A7102A928A1D294005441DD /* SceneDelegate.swift */,
@@ -96,6 +137,7 @@
 				9A7102B028A1D295005441DD /* Assets.xcassets */,
 				9A7102B228A1D295005441DD /* LaunchScreen.storyboard */,
 				9A7102B528A1D295005441DD /* Info.plist */,
+				A93741BC28EB23E100AE22E1 /* previewExtension.swift */,
 			);
 			path = PlantWithJoy;
 			sourceTree = "<group>";
@@ -140,6 +182,70 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A90F8D752908DC1200E2478C /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				A90F8D762908DC2800E2478C /* StoryBoard.storyboard */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		A93014EA28EC540600C61E21 /* ViewControllerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A93741B828EAAAA900AE22E1 /* MainViewControllerExtension.swift */,
+				A93014E628EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift */,
+			);
+			path = ViewControllerExtension;
+			sourceTree = "<group>";
+		};
+		A93741E228EB358A00AE22E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A93741E328EB359600AE22E1 /* WeekDay.swift */,
+				A93014E828EC519000C61E21 /* MyPlantDataModel.swift */,
+				A90AFF8B28EF1298008BC229 /* DateFormatter.swift */,
+				A92A48AE28F01C5600A18A90 /* DefaultButton.swift */,
+				A92A48B028F0223F00A18A90 /* Calendar+Date.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A97A08B728E87C4800DCA2F0 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				A90F8D752908DC1200E2478C /* Board */,
+				A93741E228EB358A00AE22E1 /* Model */,
+				A9EC184628E918BE00E9E099 /* Cells */,
+				A93014EA28EC540600C61E21 /* ViewControllerExtension */,
+				A97A08B828E87C5B00DCA2F0 /* MainViewController.swift */,
+				A93741BA28EAB4E700AE22E1 /* AddPlantViewController.swift */,
+				A97A1F8428F1982300BBB7CD /* DiaryViewController.swift */,
+				A95C5B8328E9878F00EACCBC /* HeaderCollectionReusableView.swift */,
+				A97A08BD28E8806700DCA2F0 /* MainViewController+DataSource.swift */,
+				A97A08BC28E87EB400DCA2F0 /* UIComponents */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
+		A97A08BC28E87EB400DCA2F0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A97A08BA28E87D1700DCA2F0 /* MainViewControllerUI.swift */,
+				A93741BF28EB24C800AE22E1 /* AddPlantViewControllerUI.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		A9EC184628E918BE00E9E099 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A9EC184728E918D300E9E099 /* MyPlantCell.swift */,
+				A92A48AC28EFF8DE00A18A90 /* ReminderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +262,10 @@
 			dependencies = (
 			);
 			name = PlantWithJoy;
+			packageProductDependencies = (
+				A9EC184A28E92C5B00E9E099 /* SnapKit */,
+				A92A48AA28EF977000A18A90 /* Then */,
+			);
 			productName = PlantWithJoy;
 			productReference = 9A7102A428A1D294005441DD /* PlantWithJoy.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +294,10 @@
 				Base,
 			);
 			mainGroup = 9A71029B28A1D294005441DD;
+			packageReferences = (
+				A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A92A48A928EF977000A18A90 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 9A7102A528A1D294005441DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +317,7 @@
 				9A7102B128A1D295005441DD /* Assets.xcassets in Resources */,
 				9A7102AF28A1D294005441DD /* Main.storyboard in Resources */,
 				9AAAC48328BE2A3400291C2C /* LICENSE.txt in Resources */,
+				A90F8D772908DC2800E2478C /* StoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,15 +331,32 @@
 				9A7102AC28A1D294005441DD /* GardenViewController.swift in Sources */,
 				A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */,
 				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
+				A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
+				A92A48AD28EFF8DE00A18A90 /* ReminderCell.swift in Sources */,
 				9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */,
+				A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */,
 				9AAAC48B28BE320F00291C2C /* PlantManagementViewController.swift in Sources */,
+				A92A48B128F0223F00A18A90 /* Calendar+Date.swift in Sources */,
 				9AAAC47828BE2A1900291C2C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				A97A1F8528F1982300BBB7CD /* DiaryViewController.swift in Sources */,
 				9A7102AA28A1D294005441DD /* SceneDelegate.swift in Sources */,
 				9AAAC47328BE2A0F00291C2C /* PlantStatusPrediction.swift in Sources */,
+				A93741BB28EAB4E700AE22E1 /* AddPlantViewController.swift in Sources */,
+				A92A48AF28F01C5600A18A90 /* DefaultButton.swift in Sources */,
+				A93741C028EB24C800AE22E1 /* AddPlantViewControllerUI.swift in Sources */,
+				A97A08BE28E8806700DCA2F0 /* MainViewController+DataSource.swift in Sources */,
+				A97A08B928E87C5B00DCA2F0 /* MainViewController.swift in Sources */,
 				A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */,
+				A95C5B8428E9878F00EACCBC /* HeaderCollectionReusableView.swift in Sources */,
+				A93741B928EAAAA900AE22E1 /* MainViewControllerExtension.swift in Sources */,
+				A9EC184828E918D300E9E099 /* MyPlantCell.swift in Sources */,
+				A93741BD28EB23E100AE22E1 /* previewExtension.swift in Sources */,
+				A93741E428EB359600AE22E1 /* WeekDay.swift in Sources */,
 				A9A8D2A828C037EE00DD2709 /* TextExtension.swift in Sources */,
 				9AAAC46D28BE2A0200291C2C /* DiagnosisView.swift in Sources */,
+				A90AFF8C28EF1298008BC229 /* DateFormatter.swift in Sources */,
+				A97A08BB28E87D1700DCA2F0 /* MainViewControllerUI.swift in Sources */,
 				9AAAC46F28BE2A0200291C2C /* CameraPicker.swift in Sources */,
 				A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */,
 			);
@@ -446,6 +578,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A92A48A928EF977000A18A90 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A92A48AA28EF977000A18A90 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A92A48A928EF977000A18A90 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		A9EC184A28E92C5B00E9E099 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9EC184928E92C5B00E9E099 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A71029C28A1D294005441DD /* Project object */;
 }
