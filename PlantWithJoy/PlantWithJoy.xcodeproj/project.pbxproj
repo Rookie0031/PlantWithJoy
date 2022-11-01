@@ -47,6 +47,7 @@
 		A9B8D33328BEED31008D5B11 /* DiseaseDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */; };
 		A9B8D33528BEED39008D5B11 /* PlantStatusClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */; };
 		A9B8D33728BEEDFD008D5B11 /* PlantDiseasePrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */; };
+		A9BB8CD92911023A0059F8FA /* TestCOnflict.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8CD82911023A0059F8FA /* TestCOnflict.swift */; };
 		A9EC184828E918D300E9E099 /* MyPlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC184728E918D300E9E099 /* MyPlantCell.swift */; };
 		A9EC184B28E92C5B00E9E099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9EC184A28E92C5B00E9E099 /* SnapKit */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		A9B8D33228BEED31008D5B11 /* DiseaseDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DiseaseDetection.mlmodel; sourceTree = "<group>"; };
 		A9B8D33428BEED39008D5B11 /* PlantStatusClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantStatusClassification.mlmodel; sourceTree = "<group>"; };
 		A9B8D33628BEEDFD008D5B11 /* PlantDiseasePrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseasePrediction.swift; sourceTree = "<group>"; };
+		A9BB8CD82911023A0059F8FA /* TestCOnflict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCOnflict.swift; sourceTree = "<group>"; };
 		A9EC184728E918D300E9E099 /* MyPlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 		9A7102A628A1D294005441DD /* PlantWithJoy */ = {
 			isa = PBXGroup;
 			children = (
+				A9BB8CD72911022D0059F8FA /* ConflictTestFolder */,
 				A97A08B728E87C4800DCA2F0 /* Refactor */,
 				9ABBC5A828B3D3BA004AD616 /* PlantWithJoy.entitlements */,
 				9A7102A728A1D294005441DD /* AppDelegate.swift */,
@@ -246,6 +249,14 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		A9BB8CD72911022D0059F8FA /* ConflictTestFolder */ = {
+			isa = PBXGroup;
+			children = (
+				A9BB8CD82911023A0059F8FA /* TestCOnflict.swift */,
+			);
+			path = ConflictTestFolder;
+			sourceTree = "<group>";
+		};
 		A9EC184628E918BE00E9E099 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +354,7 @@
 				9AAAC47728BE2A1900291C2C /* VNClassificationObservation+confidenceString.swift in Sources */,
 				A93014E928EC519000C61E21 /* MyPlantDataModel.swift in Sources */,
 				9A7102A828A1D294005441DD /* AppDelegate.swift in Sources */,
+				A9BB8CD92911023A0059F8FA /* TestCOnflict.swift in Sources */,
 				A92A48AD28EFF8DE00A18A90 /* ReminderCell.swift in Sources */,
 				9AAAC47028BE2A0200291C2C /* PhotoPicker.swift in Sources */,
 				A93014E728EC3CBA00C61E21 /* AddPlantViewControllerExtension.swift in Sources */,
